@@ -1,0 +1,286 @@
+/* Variables */
+:root {
+  --text-color: white;
+  --title-font: 'Montserrat', sans-serif; /*variable that defines title and subheads font*/
+  --text-font: 'Libre Baskerville', serif; /*variable that defines ge«neral text font*/
+}
+
+/* Resets */
+/* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}*/
+
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  margin: 0;
+  font: 16px/1 sans-serif;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+h1,
+h2,
+h3,
+h4,
+p,
+blockquote,
+figure,
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+}
+main,
+li {
+  display: block;
+}
+h1,
+h2,
+h3,
+h4 {
+  font-size: inherit;
+}
+strong {
+  font-weight: bold;
+}
+a,
+button {
+  color: inherit;
+  transition: 0.3s;
+}
+a {
+  text-decoration: none;
+}
+button {
+  overflow: visible;
+  border: 0;
+  font: inherit;
+  -webkit-font-smoothing: inherit;
+  letter-spacing: inherit;
+  background: none;
+  cursor: pointer;
+}
+::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+/* Defining basic charateristics */
+/*acabar tipografia,
+os estilos ficam estranhos porque ficam muito bold(resolvido)
+melhorar os anchors definições específicas para navs e talvez adicionar highlighting nos anchors em texto normal
+tirar o a e pôr todas as definições na parte de navegação*/
+/* Typography */
+a{
+  font-family: var(--title-font);
+  font-weight:100;
+  font-size: 1rem;
+  line-height: 1.25;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+  font-family: var(--title-font);
+  font-weight: 100;
+  line-height: 1.25;
+  margin-bottom: 20px;
+}
+
+h1,
+h2{
+  font-size: 3rem;
+}
+
+h3,
+h4,
+h5,
+h6{
+  font-size: 1.5rem;
+}
+
+p{
+  font-family: var(--text-font);
+  line-height: 1.5625;
+  padding: 0 1rem 2rem 1rem;
+}
+
+header,
+aside,
+main,
+section,
+article,
+footer {
+  background-color: #1fc8db;
+  color: var(--text-color);
+  padding: 1rem;
+  display: grid;
+}
+
+/*Basic layout*/
+.basic {
+  display: flex;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 3.5rem auto 5rem;
+  grid-gap: 0.5rem;
+  grid-template-areas: "header"
+                       "section"
+                       "footer";
+}
+
+/*partial left-sidebar layout*/
+.basic-sidebar-left {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: 3.5rem auto 5rem;
+  grid-gap: 1rem;
+  grid-template-areas: "header header"
+                       "sidebar-1 section"
+                       "footer footer";
+}
+
+/*partial right-sidebar layout*/
+.basic-sidebar-right {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: 3.5rem auto 5rem;
+  grid-gap: 1rem;
+  grid-template-areas: "header header"
+                       "section sidebar-2"
+                       "footer footer";
+}
+
+/*full left-sidebar layout*/
+.full-sidebar-left {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: 3.5rem auto 5rem;
+  grid-gap: 1rem;
+  grid-template-areas: "sidebar-1 header"
+                       "sidebar-1 section"
+                       "footer footer";
+}
+
+/*Full layout*/
+.full {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  grid-template-rows: 3.5rem auto 5rem;
+  grid-gap: 1rem;
+  grid-template-areas: "header header header"
+                       "sidebar-1 section sidebar-2"
+                       "footer footer footer";
+}
+
+/* Naming the parts of the layout*/
+header {
+  grid-area: header;
+  background-color: #7cbfb7;
+}
+
+footer {
+  grid-area: footer;
+  background-color: #254b7c;
+}
+
+.sidebar-left {
+  grid-area: sidebar-1;
+}
+
+section {
+  grid-area: section;
+  background-color: #0f9bdc;
+  background-image: linear-gradient(141deg, #9fb8ad 0%, #0f9bdc 51%, #2cb5e8 75%);
+}
+
+.sidebar-right {
+  grid-area: sidebar-2;
+}
+
+main{
+  background-color: white;
+}
+
+
+/* *********************************
+ *          Navigation             *
+ **********************************/
+
+a,
+li {
+  list-style: none;
+  text-decoration: none;
+  color: white;
+}
+header a{
+  padding: 1rem;
+}
+
+.imagem a{
+  margin: 2rem;
+}
+
+.links-hover a:hover {
+    background-color: #0f9bdc;
+    -webkit-transition: background-color 0.5s ease;
+	  -moz-transition: background-color 0.5s ease;
+    transition: background-color 0.5s ease;
+}
+
+.sticky-top{
+  top: 0;
+  z-index: 2;
+  position: fixed;
+  width:100%;
+}
+
+
+
+/* *********************************
+ *          Flex Classes           *
+ **********************************/
+
+.flexCenter{
+  justify-content: center;
+  align-self: center;
+}
+
+.flexStart{
+  justify-content: flex-start;
+}
+
+.flexEnd{
+  justify-content: flex-end;
+}
+
+.flexSpaceAround{
+  justify-content: space-around;
+}
+
+.flexRow{
+  flex-flow: row wrap;
+}
+
+.flexCol{
+  flex-flow: column wrap;
+}
+
+.flexContainer{
+  display: flex;
+}
+
+.fill{
+  flex:1;
+}
