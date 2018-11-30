@@ -4,7 +4,7 @@ CSS Framework
 
 ### Atom snippets code:
 
-```
+```HTML
 <!DOCTYPE html>
 <html lang="pt" dir="ltr">
   <head>
