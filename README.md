@@ -2,7 +2,7 @@
 CSS Framework
 
 
-## Atom snippets code:
+### Atom snippets code:
 
 ```
 <!DOCTYPE html>
