@@ -2,9 +2,9 @@
 CSS Framework
 
 
-Atom snippets code:
+##Atom snippets code:
 
-<!DOCTYPE html>
+```<!DOCTYPE html>
 <html lang="pt" dir="ltr">
   <head>
     <meta charset="utf-8">
@@ -46,3 +46,4 @@ Atom snippets code:
 
   </body>
 </html>
+```
