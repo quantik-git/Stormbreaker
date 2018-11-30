@@ -116,6 +116,7 @@ p{
   padding: 0 1rem 2rem 1rem;
 }
 
+body,
 header,
 aside,
 main,
@@ -136,7 +137,7 @@ footer {
   grid-template-rows: 3.5rem auto 5rem;
   grid-gap: 0.5rem;
   grid-template-areas: "header"
-                       "section"
+                       "main"
                        "footer";
 }
 
@@ -147,7 +148,7 @@ footer {
   grid-template-rows: 3.5rem auto 5rem;
   grid-gap: 1rem;
   grid-template-areas: "header header"
-                       "sidebar-1 section"
+                       "sidebar-1 main"
                        "footer footer";
 }
 
@@ -158,7 +159,7 @@ footer {
   grid-template-rows: 3.5rem auto 5rem;
   grid-gap: 1rem;
   grid-template-areas: "header header"
-                       "section sidebar-2"
+                       "main sidebar-2"
                        "footer footer";
 }
 
@@ -169,7 +170,7 @@ footer {
   grid-template-rows: 3.5rem auto 5rem;
   grid-gap: 1rem;
   grid-template-areas: "sidebar-1 header"
-                       "sidebar-1 section"
+                       "sidebar-1 main"
                        "footer footer";
 }
 
@@ -180,7 +181,7 @@ footer {
   grid-template-rows: 3.5rem auto 5rem;
   grid-gap: 1rem;
   grid-template-areas: "header header header"
-                       "sidebar-1 section sidebar-2"
+                       "sidebar-1 main sidebar-2"
                        "footer footer footer";
 }
 
@@ -199,8 +200,8 @@ footer {
   grid-area: sidebar-1;
 }
 
-section {
-  grid-area: section;
+main {
+  grid-area: main;
   background-color: #0f9bdc;
   background-image: linear-gradient(141deg, #9fb8ad 0%, #0f9bdc 51%, #2cb5e8 75%);
 }
@@ -209,7 +210,7 @@ section {
   grid-area: sidebar-2;
 }
 
-main{
+body{
   background-color: white;
 }
 
