@@ -1,6 +1,7 @@
 # Framework
 Documentation for CSS Framework based on flexbox with responviness and accessibility in mind.
 
+---
 ## Objectives
 - [x] Basic site Layouts
 - [x] Sticky navbar
