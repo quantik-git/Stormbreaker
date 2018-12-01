@@ -1,7 +1,13 @@
 # Framework
 CSS Framework
-
-
+---
+## Objectivess
+- [x] Basic site Layouts
+- [x] Sticky navbar
+- [ ] Hamburger menu
+- [ ] Landmarks
+- [ ] Headings
+---
 ### Atom snippets code:
 
 ```HTML
