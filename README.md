@@ -2,12 +2,25 @@
 Documentation for CSS Framework based on flexbox with responviness and accessibility in mind.
 
 ---
-## Objectives
+## Objectives:
 - [x] Basic site Layouts
 - [x] Sticky navbar
 - [ ] Hamburger menu
 - [ ] Landmarks
 - [ ] Headings
+- [ ] Audio tag
+- [ ] Figure
+- [ ] Img tag responsive
+- [ ] Form label
+- [ ] Form fieldset
+- [ ] Form date
+- [ ] Datetime tag
+- [ ] Create Screen Reader only class
+- [ ] Contrast colors hsl()?
+- [ ] Meaningfull anchor tags
+- [ ] Accesskey attribute
+- [ ] Tabindex? pode ser confuso
+
 ---
 ### Atom snippets code:
 
