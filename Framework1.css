@@ -98,24 +98,54 @@ h6{
   margin-bottom: 20px;
 }
 
-h1,
+h1{
+  font-size: 7.722em;
+}
 h2{
-  font-size: 3rem;
+  font-size: 6.25em;
 }
-
-h3,
-h4,
-h5,
+h3{
+  font-size: 4.632em;
+}
+h4{
+  font-size: 2.779em;
+}
+h5{
+  font-size: 2.5em;
+}
 h6{
-  font-size: 1.5rem;
+  font-size: 1.667em;
 }
-
 p{
   font-family: var(--text-font);
   line-height: 1.5625;
   padding: 0 1rem 2rem 1rem;
 }
+small{
+  font-size:0.6em;
+}
 
+q, 
+blockquote {
+    quotes: "\201C" "\201D" "\2018" "\2019";
+}
+[lang="fr"] q,
+[lang="fr"] blockquote{
+  quotes: "\00AB" "\00bb";
+}
+[lang="es"] q,
+[lang="es"] blockquote{
+  quotes: "\00ab" "\00bb";
+}
+[lang="ru"] q,
+[lang="ru"] blockquote{
+  quotes: "\201E" "\201D";
+}
+[lang="de"] q,
+[lang="de"] blockquote{
+  quotes: "\201e" "\201d";
+}
+/*Skeleton*/
 body,
 header,
 aside,
