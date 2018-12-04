@@ -6,16 +6,11 @@
 }
 
 /* Resets */
-/* {
+* {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
-
-body {
-    margin: 0;
-    padding: 0;
-}*/
 
 html {
   -ms-text-size-adjust: 100%;
