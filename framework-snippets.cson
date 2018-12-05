@@ -3,25 +3,59 @@
 # where you need to null-out the snippet to prevent it from
 # appearing in tags or embedded contexts
 '.text.html':
-  # A
-  'Anchor':
-    'prefix': 'a'
-    'body': '<a href="${1:#}">$2</a>$0'
-  'Abbreviation':
-    'prefix': 'abbr'
-    'body': '<abbr title="$1">$2</abbr>$0'
-  'Address':
-    'prefix': 'address'
-    'body': '<address${1: class="$2"}>\n\t$3\n</address>'
-  'Area':
-    'prefix': 'area'
-    'body': '<area${1: shape="${2:default}"} coords="$3"${4: href="${5:#}" alt="$6"}>$0'
-  'Article':
-    'prefix': 'article'
-    'body': '<article class="$1">\n\t$2\n</article>'
-  'Aside':
-    'prefix': 'aside'
-    'body': '<aside class="$1">\n\t$2\n</aside>'
-  'Audio':
-    'prefix': 'audio'
-    'body': '<audio src="$1">\n\t$2\n</audio>'
+  # Skeleton templates
+  'Basic template':
+    'prefix': 'basic'
+    'body': '''
+<!DOCTYPE html>
+<html lang="$1" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>$2</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link href="${3:https://fonts.googleapis.com/css?family=Libre+Baskerville%7CMontserrat}" rel="stylesheet">
+  </head>
+  <body class="basic">
+
+      <header class="${4:sticky-top}">
+        $5
+      </header>
+
+      <main class="flexContainer flexCenter">
+        $6
+      </main>
+
+      <footer class="flexContainer flexCenter">
+        $7
+      </footer>
+
+  </body>
+</html>
+    '''
+  # Navbars
+  'Simple top navbar':
+    'prefix': 'navbar'
+    'body': '''
+<nav class="flexContainer">
+  <ul class="flexContainer flexCenter flexStart fill">
+    <li><a href="${1:#}">${2:Brand Name}</a></li>
+  </ul>
+  <ul class="flexContainer flexCenter flexEnd links-hover">
+    <li><a href="${3:#}">${4:Link 1}</a></li>
+    <li><a href="${5:#}">${6:Link 2}</a></li>
+    <li><a href="${7:#}">${8:Link 3}</a></li>
+  </ul>
+</nav>
+    '''
+
+
+# These null out the snippets so the snippets are not available when in a tag or
+# in embedded contexts like <script> and <style>
+'.text.html .meta.tag, .text.html .embedded':
+  # Skeleton templates
+  'Basic template':
+    'prefix': 'basic'
+  # Navbars
+  'Navbar':
+    'prefix': 'navbar'
