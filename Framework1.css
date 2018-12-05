@@ -6,16 +6,11 @@
 }
 
 /* Resets */
-/* {
+* {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
-
-body {
-    margin: 0;
-    padding: 0;
-}*/
 
 html {
   -ms-text-size-adjust: 100%;
@@ -25,12 +20,19 @@ body {
   margin: 0;
   font: 16px/1 sans-serif;
   -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+body,
+input,
+button  {
   -webkit-font-smoothing: antialiased;
 }
 h1,
 h2,
 h3,
 h4,
+h5,
+h6,
 p,
 blockquote,
 figure,
@@ -38,6 +40,10 @@ ol,
 ul {
   margin: 0;
   padding: 0;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
 }
 main,
 li {
@@ -83,7 +89,7 @@ a{
   font-family: var(--title-font);
   font-weight:100;
   font-size: 1rem;
-  line-height: 1.25;
+  line-height: 1.210;
 }
 
 h1,
@@ -94,35 +100,82 @@ h5,
 h6{
   font-family: var(--title-font);
   font-weight: 100;
-  line-height: 1.25;
-  margin-bottom: 20px;
+  line-height: 1em;
+  margin: 0 0 0.5em 0;
 }
 
-h1,
+h1{
+  font-size: 6.592em;
+}
 h2{
-  font-size: 3rem;
+  font-size: 4.236em;
 }
-
-h3,
-h4,
-h5,
+h3{
+  font-size: 3.516em;
+}
+h4{
+  font-size: 2.618em;
+}
+h5{
+  font-size: 1.875em;
+}
 h6{
-  font-size: 1.5rem;
+  font-size: 1.618em;
 }
-
 p{
   font-family: var(--text-font);
-  line-height: 1.5625;
-  padding: 0 1rem 2rem 1rem;
+  line-height: 1.618;
+  margin: 0 0 1em 0;
+  max-width: 850px;
+}
+small{
+  font-size:0.618em;
 }
 
+hr {
+  height: .2em;
+  border: none;
+  background: white;
+  margin: 2em 0;
+  outline: none;
+  display: block;
+  clear: both;
+  width: 100%;
+}
+
+q, 
+blockquote {
+  quotes: "\201C" "\201D" "\2018" "\2019";
+  font-size: 1.618em;
+  font-style: italic;
+  text-indent: 1.618em;
+  line-height: 1.618;
+  margin: 0 0 1em 0;
+}
+[lang="fr"] q,
+[lang="fr"] blockquote{
+  quotes: "\00AB" "\00bb";
+}
+[lang="es"] q,
+[lang="es"] blockquote{
+  quotes: "\00ab" "\00bb";
+}
+[lang="ru"] q,
+[lang="ru"] blockquote{
+  quotes: "\201E" "\201D";
+}
+[lang="de"] q,
+[lang="de"] blockquote{
+  quotes: "\201e" "\201d";
+}
+/*Skeleton*/
+body,
 header,
 aside,
 main,
 section,
 article,
 footer {
-  background-color: #1fc8db;
   color: var(--text-color);
   padding: 1rem;
   display: grid;
@@ -133,10 +186,10 @@ footer {
   display: flex;
   display: grid;
   grid-template-columns: auto;
-  grid-template-rows: 3.5rem auto 5rem;
+  grid-template-rows: 2rem auto 5rem;
   grid-gap: 0.5rem;
   grid-template-areas: "header"
-                       "section"
+                       "main"
                        "footer";
 }
 
@@ -144,10 +197,10 @@ footer {
 .basic-sidebar-left {
   display: grid;
   grid-template-columns: auto 1fr;
-  grid-template-rows: 3.5rem auto 5rem;
+  grid-template-rows: 2rem auto 5rem;
   grid-gap: 1rem;
   grid-template-areas: "header header"
-                       "sidebar-1 section"
+                       "sidebar-1 main"
                        "footer footer";
 }
 
@@ -155,10 +208,10 @@ footer {
 .basic-sidebar-right {
   display: grid;
   grid-template-columns: 1fr auto;
-  grid-template-rows: 3.5rem auto 5rem;
+  grid-template-rows: 2rem auto 5rem;
   grid-gap: 1rem;
   grid-template-areas: "header header"
-                       "section sidebar-2"
+                       "main sidebar-2"
                        "footer footer";
 }
 
@@ -166,10 +219,10 @@ footer {
 .full-sidebar-left {
   display: grid;
   grid-template-columns: auto 1fr;
-  grid-template-rows: 3.5rem auto 5rem;
+  grid-template-rows: 2rem auto 5rem;
   grid-gap: 1rem;
   grid-template-areas: "sidebar-1 header"
-                       "sidebar-1 section"
+                       "sidebar-1 main"
                        "footer footer";
 }
 
@@ -177,10 +230,10 @@ footer {
 .full {
   display: grid;
   grid-template-columns: auto 1fr auto;
-  grid-template-rows: 3.5rem auto 5rem;
+  grid-template-rows: 2rem auto 5rem;
   grid-gap: 1rem;
   grid-template-areas: "header header header"
-                       "sidebar-1 section sidebar-2"
+                       "sidebar-1 main sidebar-2"
                        "footer footer footer";
 }
 
@@ -196,20 +249,22 @@ footer {
 }
 
 .sidebar-left {
+  background-color: #1fc8db;
   grid-area: sidebar-1;
 }
 
-section {
-  grid-area: section;
+main {
+  grid-area: main;
   background-color: #0f9bdc;
   background-image: linear-gradient(141deg, #9fb8ad 0%, #0f9bdc 51%, #2cb5e8 75%);
 }
 
 .sidebar-right {
+  background-color: #1fc8db;
   grid-area: sidebar-2;
 }
 
-main{
+body{
   background-color: white;
 }
 
@@ -283,4 +338,10 @@ header a{
 
 .fill{
   flex:1;
+}
+
+@media (max-width: 528px){
+  body {
+    font: 12px/1 sans-serif;
+  }
 }
