@@ -1,0 +1,27 @@
+# Important: When adding a new snippet,
+# there is a second section halfway down this file
+# where you need to null-out the snippet to prevent it from
+# appearing in tags or embedded contexts
+'.text.html':
+  # A
+  'Anchor':
+    'prefix': 'a'
+    'body': '<a href="${1:#}">$2</a>$0'
+  'Abbreviation':
+    'prefix': 'abbr'
+    'body': '<abbr title="$1">$2</abbr>$0'
+  'Address':
+    'prefix': 'address'
+    'body': '<address${1: class="$2"}>\n\t$3\n</address>'
+  'Area':
+    'prefix': 'area'
+    'body': '<area${1: shape="${2:default}"} coords="$3"${4: href="${5:#}" alt="$6"}>$0'
+  'Article':
+    'prefix': 'article'
+    'body': '<article class="$1">\n\t$2\n</article>'
+  'Aside':
+    'prefix': 'aside'
+    'body': '<aside class="$1">\n\t$2\n</aside>'
+  'Audio':
+    'prefix': 'audio'
+    'body': '<audio src="$1">\n\t$2\n</audio>'
