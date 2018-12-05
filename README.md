@@ -7,7 +7,7 @@ Documentation for CSS Framework based on flexbox with responviness and accessibi
 - [x] Sticky navbar
 - [ ] Hamburger menu
 - [ ] Landmarks
-- [ ] Headings
+- [x] Headings
 - [ ] Audio tag
 - [ ] Figure
 - [ ] Img tag responsive
