@@ -1,8 +1,11 @@
 /* Variables */
 :root {
   --text-color: white;
+  --main-theme-color: #0d324d;
+  --secondary-theme-color: #3c3c3c;
+  --tertiary-theme-color: #7f5a83;
   --title-font: 'Montserrat', sans-serif; /*variable that defines title and subheads font*/
-  --text-font: 'Libre Baskerville', serif; /*variable that defines ge«neral text font*/
+  --text-font: 'Libre Baskerville', serif; /*variable that defines general text font*/
 }
 
 /* Resets */
@@ -79,10 +82,24 @@ button {
   padding: 0;
   border: 0;
 }
+/* Ajustes para quando a webpage é imprimida*/
+@media print {
+  .header {
+    position: static;
+  }
+  nav {
+    display: none;
+  }
+  a[href^="http"]:not([href*="mywebsite.com"])::after {
+    content: " (" attr(href) ")";
+  }
+}
+
+/* *********************************
+ *          Tipografia             ************************************************************************************************************************************************************************************
+ **********************************/
 /* Defining basic charateristics */
-/*acabar tipografia,
-os estilos ficam estranhos porque ficam muito bold(resolvido)
-melhorar os anchors definições específicas para navs e talvez adicionar highlighting nos anchors em texto normal
+/*acabar tipografia, melhorar os anchors definições específicas para navs e talvez adicionar highlighting nos anchors em texto normal
 tirar o a e pôr todas as definições na parte de navegação*/
 /* Typography */
 a{
@@ -126,7 +143,7 @@ p{
   font-family: var(--text-font);
   line-height: 1.618;
   margin: 0 0 1em 0;
-  max-width: 850px;
+  max-width: 65ch;
 }
 small{
   font-size:0.618em;
@@ -238,29 +255,29 @@ footer {
 }
 
 /* Naming the parts of the layout*/
-header {
+.head {
   grid-area: header;
-  background-color: #7cbfb7;
+  background-color: var(--main-theme-color);
 }
 
-footer {
+.footer {
   grid-area: footer;
-  background-color: #254b7c;
+  background-color: var(--main-theme-color);
 }
 
 .sidebar-left {
-  background-color: #1fc8db;
+  background-color: var(--secondary-theme-color);
   grid-area: sidebar-1;
 }
 
 main {
   grid-area: main;
-  background-color: #0f9bdc;
-  background-image: linear-gradient(141deg, #9fb8ad 0%, #0f9bdc 51%, #2cb5e8 75%);
+  background-color: var(--tertiary-theme-color);
+  background-image: linear-gradient(315deg, var(--tertiary-theme-color) 0%, var(--main-theme-color) 74%);
 }
 
 .sidebar-right {
-  background-color: #1fc8db;
+  background-color: var(--secondary-theme-color);
   grid-area: sidebar-2;
 }
 
@@ -270,7 +287,7 @@ body{
 
 
 /* *********************************
- *          Navigation             *
+ *          Navigation             ************************************************************************************************************************************************************************************
  **********************************/
 
 a,
@@ -288,10 +305,15 @@ header a{
 }
 
 .links-hover a:hover {
-    background-color: #0f9bdc;
-    -webkit-transition: background-color 0.5s ease;
-	  -moz-transition: background-color 0.5s ease;
-    transition: background-color 0.5s ease;
+    background-color: var(--text-color);
+    -webkit-transition: background-color 0.6s ease;
+	  -moz-transition: background-color 0.6s ease;
+    transition: background-color 0.6s ease;
+  
+    color: var(--main-theme-color);
+    -webkit-transition: color 0.3s ease;
+	  -moz-transition: color 0.3s ease;
+    transition: color 0.3s ease;
 }
 
 .sticky-top{
@@ -303,8 +325,8 @@ header a{
 
 
 
-/* *********************************
- *          Flex Classes           *
+/***********************************
+ *          Flex Classes           ************************************************************************************************************************************************************************************
  **********************************/
 
 .flexCenter{
@@ -336,12 +358,44 @@ header a{
   display: flex;
 }
 
-.fill{
+.brand{
   flex:1;
 }
+/**********************************
+ *            Cartões              ************************************************************************************************************************************************************************************
+ **********************************/
 
-@media (max-width: 528px){
-  body {
-    font: 12px/1 sans-serif;
-  }
+.card {
+  display: grid;
+  grid-template-rows: max-content 1fr;
+  border: solid white;
+  padding: 0;
+  width:200px;
+}
+.card img {
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+}
+.card h2{
+  text-align: center;
+  font-size: 1.5em;
+  margin: 0 0.5rem 0.5rem;
+}
+.card header{
+  background-color: transparent;
+  padding: 0;
+}
+figcaption{
+  margin: 0 0.5em 0.5em;
+  text-align:justify;
+}
+
+.card-reverse{
+  background-color: var(--text-color);
+  color: var(--main-theme-color);
+}
+.card-reverse h2{
+  background-color: var(--text-color);
+  color: var(--main-theme-color);
 }
