@@ -23,11 +23,8 @@ Documentation for CSS Framework based on flexbox with responviness and accessibi
 
 ---
 ## Navbars:
+We have three types of navbars, two top navbars and one side navbar all accessible and responsive.
 
-```HTML
-
-```
----
 ### Top-nav:
 
 ```HTML
