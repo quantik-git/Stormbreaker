@@ -1,8 +1,12 @@
 /* Variables */
 :root {
+  --grid-columns: 12;
   --text-color: white;
+  --main-theme-color: #0d324d;
+  --secondary-theme-color: #3c3c3c;
+  --tertiary-theme-color: #7f5a83;
   --title-font: 'Montserrat', sans-serif; /*variable that defines title and subheads font*/
-  --text-font: 'Libre Baskerville', serif; /*variable that defines ge«neral text font*/
+  --text-font: 'Libre Baskerville', serif; /*variable that defines general text font*/
 }
 
 /* Resets */
@@ -79,10 +83,76 @@ button {
   padding: 0;
   border: 0;
 }
+/* Ajustes para quando a webpage é imprimida*/
+@media print {
+  .header {
+    position: static;
+  }
+  nav {
+    display: none;
+  }
+  a[href^="http"]:not([href*="mywebsite.com"])::after {
+    content: " (" attr(href) ")";
+  }
+}
+/* *********************************
+ *          Grid-System            ************************************************************************************************************************************************************************************
+ **********************************/
+.row{
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(var(--grid-columns), minmax(auto, 1fr));
+  grid-auto-rows: auto;
+}
+
+@media screen and (min-width: 320px){
+  .span-sm-1{ grid-column: span 1;}
+  .span-sm-2{ grid-column: span 2;}
+  .span-sm-3{ grid-column: span 3;}
+  .span-sm-4{ grid-column: span 4;}
+  .span-sm-5{ grid-column: span 5;}
+  .span-sm-6{ grid-column: span 6;}
+  .span-sm-7{ grid-column: span 7;}
+  .span-sm-8{ grid-column: span 8;}
+  .span-sm-9{ grid-column: span 9;}
+  .span-sm-10{ grid-column: span 10;}
+  .span-sm-11{ grid-column: span 11;}
+  .span-sm-12{ grid-column: span 12;}
+}
+@media screen and (min-width: 640px){
+  .span-md-1{ grid-column: span 1;}
+  .span-md-2{ grid-column: span 2;}
+  .span-md-3{ grid-column: span 3;}
+  .span-md-4{ grid-column: span 4;}
+  .span-md-5{ grid-column: span 5;}
+  .span-md-6{ grid-column: span 6;}
+  .span-md-7{ grid-column: span 7;}
+  .span-md-8{ grid-column: span 8;}
+  .span-md-9{ grid-column: span 9;}
+  .span-md-10{ grid-column: span 10;}
+  .span-md-11{ grid-column: span 11;}
+  .span-md-12{ grid-column: span 12;}
+}
+@media screen and (min-width: 960px){
+  .span-lg-1{ grid-column: span 1;}
+  .span-lg-2{ grid-column: span 2;}
+  .span-lg-3{ grid-column: span 3;}
+  .span-lg-4{ grid-column: span 4;}
+  .span-lg-5{ grid-column: span 5;}
+  .span-lg-6{ grid-column: span 6;}
+  .span-lg-7{ grid-column: span 7;}
+  .span-lg-8{ grid-column: span 8;}
+  .span-lg-9{ grid-column: span 9;}
+  .span-lg-10{ grid-column: span 10;}
+  .span-lg-11{ grid-column: span 11;}
+  .span-lg-12{ grid-column: span 12;}
+}
+
+/**********************************
+ *          Tipografia             ************************************************************************************************************************************************************************************
+ **********************************/
 /* Defining basic charateristics */
-/*acabar tipografia,
-os estilos ficam estranhos porque ficam muito bold(resolvido)
-melhorar os anchors definições específicas para navs e talvez adicionar highlighting nos anchors em texto normal
+/*acabar tipografia, melhorar os anchors definições específicas para navs e talvez adicionar highlighting nos anchors em texto normal
 tirar o a e pôr todas as definições na parte de navegação*/
 /* Typography */
 a{
@@ -126,7 +196,7 @@ p{
   font-family: var(--text-font);
   line-height: 1.618;
   margin: 0 0 1em 0;
-  max-width: 850px;
+  max-width: 65ch;
 }
 small{
   font-size:0.618em;
@@ -169,7 +239,7 @@ blockquote {
   quotes: "\201e" "\201d";
 }
 /*Skeleton*/
-body,
+
 header,
 aside,
 main,
@@ -181,13 +251,16 @@ footer {
   display: grid;
 }
 
+/* *********************************
+ *            Layout                ************************************************************************************************************************************************************************************
+ **********************************/
 /*Basic layout*/
 .basic {
   display: flex;
   display: grid;
   grid-template-columns: auto;
-  grid-template-rows: 2rem auto 5rem;
-  grid-gap: 0.5rem;
+  grid-template-rows: repeat(3, auto);
+  grid-gap: 1rem;
   grid-template-areas: "header"
                        "main"
                        "footer";
@@ -197,7 +270,7 @@ footer {
 .basic-sidebar-left {
   display: grid;
   grid-template-columns: auto 1fr;
-  grid-template-rows: 2rem auto 5rem;
+  grid-template-rows: repeat(3, auto);
   grid-gap: 1rem;
   grid-template-areas: "header header"
                        "sidebar-1 main"
@@ -208,7 +281,7 @@ footer {
 .basic-sidebar-right {
   display: grid;
   grid-template-columns: 1fr auto;
-  grid-template-rows: 2rem auto 5rem;
+  grid-template-rows: repeat(3, auto);
   grid-gap: 1rem;
   grid-template-areas: "header header"
                        "main sidebar-2"
@@ -219,48 +292,48 @@ footer {
 .full-sidebar-left {
   display: grid;
   grid-template-columns: auto 1fr;
-  grid-template-rows: 2rem auto 5rem;
+  grid-template-rows: repeat(3, auto);
   grid-gap: 1rem;
   grid-template-areas: "sidebar-1 header"
                        "sidebar-1 main"
                        "footer footer";
 }
 
-/*Full layout*/
+/*Full layout*//*
 .full {
   display: grid;
   grid-template-columns: auto 1fr auto;
-  grid-template-rows: 2rem auto 5rem;
+  grid-template-rows: repeat(3, auto);
   grid-gap: 1rem;
   grid-template-areas: "header header header"
                        "sidebar-1 main sidebar-2"
                        "footer footer footer";
-}
+}*/
 
 /* Naming the parts of the layout*/
-header {
+.head {
   grid-area: header;
-  background-color: #7cbfb7;
+  background-color: var(--main-theme-color);
 }
 
-footer {
+.footer {
   grid-area: footer;
-  background-color: #254b7c;
+  background-color: var(--main-theme-color);
 }
 
 .sidebar-left {
-  background-color: #1fc8db;
+  background-color: var(--secondary-theme-color);
   grid-area: sidebar-1;
 }
 
 main {
   grid-area: main;
-  background-color: #0f9bdc;
-  background-image: linear-gradient(141deg, #9fb8ad 0%, #0f9bdc 51%, #2cb5e8 75%);
+  background-color: var(--tertiary-theme-color);
+  background-image: linear-gradient(315deg, var(--tertiary-theme-color) 0%, var(--main-theme-color) 74%);
 }
 
 .sidebar-right {
-  background-color: #1fc8db;
+  background-color: var(--secondary-theme-color);
   grid-area: sidebar-2;
 }
 
@@ -270,7 +343,7 @@ body{
 
 
 /* *********************************
- *          Navigation             *
+ *          Navigation             ************************************************************************************************************************************************************************************
  **********************************/
 
 a,
@@ -288,23 +361,28 @@ header a{
 }
 
 .links-hover a:hover {
-    background-color: #0f9bdc;
-    -webkit-transition: background-color 0.5s ease;
-	  -moz-transition: background-color 0.5s ease;
-    transition: background-color 0.5s ease;
+    background-color: var(--text-color);
+    -webkit-transition: background-color 0.6s ease;
+	  -moz-transition: background-color 0.6s ease;
+    transition: background-color 0.6s ease;
+  
+    color: var(--main-theme-color);
+    -webkit-transition: color 0.3s ease;
+	  -moz-transition: color 0.3s ease;
+    transition: color 0.3s ease;
 }
 
 .sticky-top{
   top: 0;
   z-index: 2;
-  position: fixed;
+  position: sticky;
   width:100%;
 }
 
 
 
-/* *********************************
- *          Flex Classes           *
+/***********************************
+ *          Flex Classes           ************************************************************************************************************************************************************************************
  **********************************/
 
 .flexCenter{
@@ -314,34 +392,67 @@ header a{
 
 .flexStart{
   justify-content: flex-start;
+  align-self: flex-start;
 }
 
 .flexEnd{
   justify-content: flex-end;
+  align-self: flex-end;
 }
 
 .flexSpaceAround{
   justify-content: space-around;
+  align-self: space-around;
 }
 
 .flexRow{
+  display: flex;
   flex-flow: row wrap;
 }
 
 .flexCol{
-  flex-flow: column wrap;
-}
-
-.flexContainer{
   display: flex;
+  flex-flow: column nowrap;
 }
 
-.fill{
+.brand{
   flex:1;
 }
+/**********************************
+ *            Cartões              ************************************************************************************************************************************************************************************
+ **********************************/
 
-@media (max-width: 528px){
-  body {
-    font: 12px/1 sans-serif;
-  }
+.card {
+  display: grid;
+  grid-template-rows: max-content 1fr;
+  border: solid white;
+  padding: 0;
+  width:200px;
+}
+.card img {
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+}
+.card h2{
+  text-align: center;
+  font-size: 1.5em;
+  margin: 0 0.5rem 0.5rem;
+}
+.card header{
+  background-color: transparent;
+  padding: 0;
+}
+figcaption{
+  margin: 0 0.5em 0.5em;
+  text-align:justify;
+}
+
+.card-reverse{
+  background-color: var(--text-color);
+  color: var(--main-theme-color);
+}
+.card-reverse h2{
+  background-color: var(--text-color);
+  color: var(--main-theme-color);
 }
