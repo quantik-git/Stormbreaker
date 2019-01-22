@@ -1,5 +1,5 @@
 # Framework
-Documentation for CSS Framework based on flexbox with responviness and accessibility in mind.
+This framework is a framework focused on accessibility and customizability.
 
 ---
 ## Objectives:
@@ -7,7 +7,7 @@ Documentation for CSS Framework based on flexbox with responviness and accessibi
 - [x] Sticky navbar
 - [ ] Hamburger menu
 - [ ] Landmarks
-- [ ] Headings
+- [x] Headings
 - [ ] Audio tag
 - [ ] Figure
 - [ ] Img tag responsive
@@ -20,6 +20,15 @@ Documentation for CSS Framework based on flexbox with responviness and accessibi
 - [ ] Meaningfull anchor tags
 - [ ] Accesskey attribute
 - [ ] Tabindex? pode ser confuso
+
+---
+## Getting Started:
+To get started you can either use this CDN link: 
+```HTML
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/quantik-git/framework/Framework1.css">
+```
+and download the **variables.js** file to access the variables.
+Or you can also download the whole project from this repository.
 
 ---
 ## Navbars:
