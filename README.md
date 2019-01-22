@@ -31,6 +31,16 @@ Or you can use this CDN link:
 and download the **variables.js** file to access the variables.
 
 ---
+## Layouts:
+To get started you can either download the whole project from this repository.\
+Or you can use this CDN link:
+```HTML
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/quantik-git/framework/Framework1.css">
+```
+and download the **variables.js** file to access the variables.
+
+
+---
 ## Navbars:
 We have three types of navbars, two top navbars and one side navbar all accessible and responsive.
 
