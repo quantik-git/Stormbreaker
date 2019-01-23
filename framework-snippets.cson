@@ -1,0 +1,61 @@
+# Important: When adding a new snippet,
+# there is a second section halfway down this file
+# where you need to null-out the snippet to prevent it from
+# appearing in tags or embedded contexts
+'.text.html':
+  # Skeleton templates
+  'Basic template':
+    'prefix': 'basic'
+    'body': '''
+<!DOCTYPE html>
+<html lang="$1" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>$2</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link href="${3:https://fonts.googleapis.com/css?family=Libre+Baskerville%7CMontserrat}" rel="stylesheet">
+  </head>
+  <body class="basic">
+
+      <header class="${4:sticky-top}">
+        $5
+      </header>
+
+      <main class="flexContainer flexCenter">
+        $6
+      </main>
+
+      <footer class="flexContainer flexCenter">
+        $7
+      </footer>
+
+  </body>
+</html>
+    '''
+  # Navbars
+  'Simple top navbar':
+    'prefix': 'navbar'
+    'body': '''
+<nav class="flexContainer">
+  <ul class="flexContainer flexCenter flexStart fill">
+    <li><a href="${1:#}">${2:Brand Name}</a></li>
+  </ul>
+  <ul class="flexContainer flexCenter flexEnd links-hover">
+    <li><a href="${3:#}">${4:Link 1}</a></li>
+    <li><a href="${5:#}">${6:Link 2}</a></li>
+    <li><a href="${7:#}">${8:Link 3}</a></li>
+  </ul>
+</nav>
+    '''
+
+
+# These null out the snippets so the snippets are not available when in a tag or
+# in embedded contexts like <script> and <style>
+'.text.html .meta.tag, .text.html .embedded':
+  # Skeleton templates
+  'Basic template':
+    'prefix': 'basic'
+  # Navbars
+  'Navbar':
+    'prefix': 'navbar'
