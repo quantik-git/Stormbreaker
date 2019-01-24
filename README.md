@@ -35,6 +35,7 @@
 This framework allows for agile development when paired with the atom editor. A panoply of classes is included from basic layout templates to specific individual components.\
 Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
 
+---
 # Getting Started:
 To get started you can either download the whole project from this repository.\
 Or you can use the our github CDN and download the **variables.js** file to alter the variables.
@@ -47,6 +48,7 @@ Or you can use the our github CDN and download the **variables.js** file to alte
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/quantik-git/framework/Framework1.css">
 ```
 
+---
 # License
 [GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007](https://www.gnu.org/licenses/gpl-3.0.en.html).\
 Please have a look at the [LICENSE](https://github.com/quantik-git/framework/blob/WIP/LICENSE) for more details.
