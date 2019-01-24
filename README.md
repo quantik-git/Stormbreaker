@@ -46,9 +46,6 @@ Or you can use this CDN link:
 ```
 and download the **variables.js** file to access the variables.
 
-# Usage
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
-
 # Support
 Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
 
@@ -56,8 +53,8 @@ Tell people where they can go to for help. It can be any combination of an issue
 Show your appreciation to those who have contributed to the project.
 
 # License
-For open source projects, say how it is licensed.
-
+[GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007](https://www.gnu.org/licenses/gpl-3.0.en.html)
+Please have a look at the [LICENSE](https://github.com/quantik-git/framework/blob/WIP/LICENSE) for more details.
 
 ---
 ## Objectives:
