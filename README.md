@@ -40,20 +40,18 @@ Let people know what your project can do specifically. Provide context and add a
 
 # Getting Started:
 To get started you can either download the whole project from this repository.\
-Or you can use this CDN link:
+Or you can use the our github CDN and download the **variables.js** file to alter the variables.
+## CSS only:
 ```HTML
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/quantik-git/framework/Framework1.css">
 ```
-and download the **variables.js** file to access the variables.
-
-# Support
-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
-
-# Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
+## JS and jQuery:
+```HTML
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/quantik-git/framework/Framework1.css">
+```
 
 # License
-[GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007](https://www.gnu.org/licenses/gpl-3.0.en.html)
+[GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007](https://www.gnu.org/licenses/gpl-3.0.en.html).\
 Please have a look at the [LICENSE](https://github.com/quantik-git/framework/blob/WIP/LICENSE) for more details.
 
 ---
