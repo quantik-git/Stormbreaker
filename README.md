@@ -16,16 +16,7 @@
 
 <p align="center">
   <a href="https://www.gnu.org/licenses/gpl-3.0.en.html">
-    <img src="https://img.shields.io/badge/license-GPL-brightgreen.svg" alt="GNU license">
-  </a>
-  <a href="https://gitter.im/amitmerchant1990/electron-markdownify">
-    <img src="https://badges.gitter.im/amitmerchant1990/electron-markdownify.svg">
-  </a>
-  <a href="https://saythanks.io/to/amitmerchant1990">
-      <img src="https://img.shields.io/badge/SayThanks.io-%E2%98%BC-1EAEDB.svg">
-  </a>
-  <a href="https://www.paypal.me/AmitMerchant">
-    <img src="https://img.shields.io/badge/$-donate-ff69b4.svg?maxAge=2592000&amp;style=flat">
+    <img src="https://img.shields.io/badge/license-GPL-brightgreen.svg?style=for-the-badge" alt="GNU license">
   </a>
 </p>
 
