@@ -10,10 +10,11 @@
 
 <p align="center">
   <a href="https://badge.fury.io/js/electron-markdownify">
-    <img src="https://badge.fury.io/js/electron-markdownify.svg"
-         alt="Gitter">
+    <img src="https://badge.fury.io/js/electron-markdownify.svg" alt="Gitter">
   </a>
-  <a href="https://gitter.im/amitmerchant1990/electron-markdownify"><img src="https://badges.gitter.im/amitmerchant1990/electron-markdownify.svg"></a>
+  <a href="https://gitter.im/amitmerchant1990/electron-markdownify">
+    <img src="https://badges.gitter.im/amitmerchant1990/electron-markdownify.svg">
+  </a>
   <a href="https://saythanks.io/to/amitmerchant1990">
       <img src="https://img.shields.io/badge/SayThanks.io-%E2%98%BC-1EAEDB.svg">
   </a>
@@ -39,11 +40,11 @@ Let people know what your project can do specifically. Provide context and add a
 # Getting Started:
 To get started you can either download the whole project from this repository.\
 Or you can use the our github CDN and download the **variables.js** file to alter the variables.
-## CSS only:
+### CSS only:
 ```HTML
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/quantik-git/framework/Framework1.css">
 ```
-## JS and jQuery:
+### JS and jQuery:
 ```HTML
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/quantik-git/framework/Framework1.css">
 ```
