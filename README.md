@@ -16,7 +16,10 @@
 
 <p align="center">
   <a href="https://www.gnu.org/licenses/gpl-3.0.en.html">
-    <img src="https://img.shields.io/badge/license-GPL-brightgreen.svg?style=for-the-badge" alt="GNU license">
+    <img src="https://img.shields.io/badge/license-GNU--GPL-brightgreen.svg?style=for-the-badge" alt="GNU license">
+  </a>
+  <a href="https://www.gnu.org/licenses/gpl-3.0.en.html">
+    <img src="https://img.shields.io/badge/A11Y-Compliant-brightgreen.svg?style=for-the-badge" alt="GNU license">
   </a>
 </p>
 
