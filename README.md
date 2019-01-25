@@ -46,7 +46,8 @@ Or you can use the our github CDN and download the **variables.js** file to alte
 ```
 ### JS and jQuery:
 ```HTML
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/quantik-git/framework/Framework1.css">
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/quantik-git/framework/functionality.js"></script>
 ```
 
 ---
