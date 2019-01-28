@@ -57,21 +57,20 @@ Please have a look at the [LICENSE](https://github.com/quantik-git/framework/blo
 
 ---
 ## Objectives:
-- [x] Basic site Layouts
-- [x] Sticky navbar
 - [ ] Hamburger menu
-- [ ] Landmarks
-- [x] Headings
 - [ ] Audio tag
-- [ ] Figure
 - [ ] Img tag responsive
 - [ ] Form label
 - [ ] Form fieldset
 - [ ] Form date
 - [ ] Datetime tag
-- [ ] Create Screen Reader only class
 - [ ] Contrast colors hsl()?
 - [ ] Meaningfull anchor tags
 - [ ] Accesskey attribute
 - [ ] Tabindex? pode ser confuso
-
+- [x] Create Screen Reader only class
+- [x] Basic site Layouts
+- [x] Sticky navbar
+- [x] Landmarks
+- [x] Headings
+- [x] Figure
