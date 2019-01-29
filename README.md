@@ -8,11 +8,13 @@
 
 <h4 align="center">A framework focused on accessibility and customization</h4>
 
-[![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
-[![forthebadge](https://forthebadge.com/images/badges/validated-html5.svg)](https://forthebadge.com)
-[![forthebadge](https://forthebadge.com/images/badges/uses-css.svg)](https://forthebadge.com)
-[![forthebadge](https://forthebadge.com/images/badges/uses-html.svg)](https://forthebadge.com)
-[![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)](https://forthebadge.com)
+<p align="center">
+  <img src="https://forthebadge.com/images/badges/built-with-love.svg" alt="Built with love">
+  <img src="https://forthebadge.com/images/badges/validated-html5.svg" alt="Validated HTML5">
+  <img src="https://forthebadge.com/images/badges/uses-css.svg" alt="Uses CSS">
+  <img src="https://forthebadge.com/images/badges/uses-html.svg" alt="Uses HTML">
+  <img src="https://forthebadge.com/images/badges/made-with-javascript.svg" alt="Made3 with Javascript">
+</p>
 
 <p align="center">
   <a href="https://www.gnu.org/licenses/gpl-3.0.en.html">
