@@ -44,7 +44,7 @@ To get started you can either download the whole project from this repository.\
 Or you can use the our github CDN and download the **variables.js** file to alter the variables.
 ### CSS only:
 ```HTML
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/quantik-git/framework/Framework1.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/quantik-git/framework/Framework.css">
 ```
 ### JS and jQuery:
 ```HTML
