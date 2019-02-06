@@ -2,10 +2,11 @@
   <br>
   <a href=""><img src="logo.png" alt="logo" width="200"></a>
   <br>
-  Framework
+  Stormbreaker
   <br>
 </h1>
 
+<h4 align="center">Stormbreaker A11Y made easy</h4>
 <h4 align="center">A framework focused on accessibility and customization</h4>
 
 [![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
