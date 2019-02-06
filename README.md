@@ -1,20 +1,19 @@
 <h1 align="center">
   <br>
-  <a href=""><img src="imgs/logo.png" alt="logo" width="200"></a>
+  <a href=""><img src="logo.png" alt="logo" width="200"></a>
   <br>
-  Framework
+  Stormbreaker
   <br>
 </h1>
 
+<h4 align="center">Stormbreaker A11Y made easy</h4>
 <h4 align="center">A framework focused on accessibility and customization</h4>
 
-<p align="center">
-  <img src="https://forthebadge.com/images/badges/built-with-love.svg" alt="Built with love">
-  <img src="https://forthebadge.com/images/badges/validated-html5.svg" alt="Validated HTML5">
-  <img src="https://forthebadge.com/images/badges/uses-css.svg" alt="Uses CSS">
-  <img src="https://forthebadge.com/images/badges/uses-html.svg" alt="Uses HTML">
-  <img src="https://forthebadge.com/images/badges/made-with-javascript.svg" alt="Made3 with Javascript">
-</p>
+[![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
+[![forthebadge](https://forthebadge.com/images/badges/validated-html5.svg)](https://forthebadge.com)
+[![forthebadge](https://forthebadge.com/images/badges/uses-css.svg)](https://forthebadge.com)
+[![forthebadge](https://forthebadge.com/images/badges/uses-html.svg)](https://forthebadge.com)
+[![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)](https://forthebadge.com)
 
 <p align="center">
   <a href="https://www.gnu.org/licenses/gpl-3.0.en.html">
@@ -50,11 +49,6 @@ Or you can use the our github CDN and download the **variables.js** file to alte
 ```HTML
 <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 <script src="https://cdn.jsdelivr.net/gh/quantik-git/framework/functionality.js"></script>
-```
-### Atom Package:
-To download the atom package you can use the apm in the command line or you can search for it in atom.
-```
-apm laguage-stormbreaker
 ```
 
 ---
