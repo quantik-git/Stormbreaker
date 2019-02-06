@@ -1,6 +1,6 @@
 <h1 align="center">
   <br>
-  <a href=""><img src="imgs/logo.png" alt="logo" width="200"></a>
+  <a href=""><img src="imgs/LOGO.png" alt="logo" width="200"></a>
   <br>
   Stormbreaker
   <br>
