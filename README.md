@@ -1,6 +1,6 @@
 <h1 align="center">
   <br>
-  <a href=""><img src="logo.png" alt="logo" width="200"></a>
+  <a href=""><img src="imgs/LOGO.png" alt="logo" width="200"></a>
   <br>
   Stormbreaker
   <br>
@@ -48,7 +48,7 @@ Or you can use the our github CDN and download the **variables.js** file to alte
 ### JS and jQuery:
 ```HTML
 <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-<script src="https://cdn.jsdelivr.net/gh/quantik-git/framework/functionality.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/quantik-git/Stormbreaker/functionality.js"></script>
 ```
 
 ---

@@ -166,8 +166,7 @@ button {
  *          Tipografia             ************************************************************************************************************************************************************************************
  **********************************/
 /* Defining basic charateristics */
-/*acabar tipografia, melhorar os anchors definições específicas para navs e talvez adicionar highlighting nos anchors em texto normal
-tirar o a e pôr todas as definições na parte de navegação*/
+/* melhorar os anchors definições específicas para navs e talvez adicionar highlighting nos anchors*/
 /* Typography */
 a{
   font-family: var(--title-font);
