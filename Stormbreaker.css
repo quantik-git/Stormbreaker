@@ -166,7 +166,8 @@ button {
  *          Tipografia             ************************************************************************************************************************************************************************************
  **********************************/
 /* Defining basic charateristics */
-/* melhorar os anchors definições específicas para navs e talvez adicionar highlighting nos anchors*/
+/*acabar tipografia, melhorar os anchors definições específicas para navs e talvez adicionar highlighting nos anchors em texto normal
+tirar o a e pôr todas as definições na parte de navegação*/
 /* Typography */
 a{
   font-family: var(--title-font);
@@ -392,12 +393,14 @@ header a{
   width:100%;
 }
 
-
+.vertical-nav ul li a{
+  display: block;
+  padding: 0.3em 0.6em;
+}
 
 /***********************************
  *          Flex Classes           ************************************************************************************************************************************************************************************
  **********************************/
-
 .flexCenter{
   justify-content: center;
   align-self: center;
@@ -431,10 +434,10 @@ header a{
 .brand{
   flex:1;
 }
+
 /**********************************
  *            Cartões              ************************************************************************************************************************************************************************************
  **********************************/
-
 .card {
   display: grid;
   grid-template-rows: max-content 1fr;
@@ -468,4 +471,93 @@ figcaption{
 .card-reverse h2{
   background-color: var(--text-color);
   color: var(--main-theme-color);
+}
+
+
+/**********************************
+ *            Sidebar              ************************************************************************************************************************************************************************************
+ **********************************/
+.btn-sidebar-left{
+  position: fixed;
+  z-index: 2;
+  padding-left: 0;
+  -webkit-border-top-right-radius: 10px;
+  -webkit-border-bottom-right-radius: 10px;
+  -moz-border-radius-topright: 10px;
+  -moz-border-radius-bottomright: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.btn-sidebar-right{
+  position: fixed;
+  z-index: 2;
+  padding-right: 0;
+  -webkit-border-top-left-radius: 10px;
+  -webkit-border-bottom-left-radius: 10px;
+  -moz-border-radius-topleft: 10px;
+  -moz-border-radius-bottomleft: 10px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+/**********************************
+ *             Forms               ************************************************************************************************************************************************************************************
+ **********************************/
+input{
+  cursor: pointer;
+}
+
+input[type=url],
+input[type=tel],
+input[type=text],
+input[type=time],
+input[type=week],
+input[type=date],
+input[type=month],
+input[type=email],
+input[type=number],
+input[type=search],
+input[type=password],
+input[type=datetime-local] {
+  height: 3rem;
+  width: 20em;
+  padding: 0 10px;
+  color:  var(--main-theme-color);
+  border: 4px solid #ccc;
+  font-size: 1.2em;
+}
+
+input[type=reset],
+input[type=button],
+input[type=submit] {
+  height: 3rem;
+  padding: 0 10px;
+  color: var(--text-color);
+  border: 4px solid #ccc;
+  font-size: 1.2em;
+  background-color: var(--tertiary-theme-color);
+}
+
+input[type=reset]:hover,
+input[type=button]:hover,
+input[type=submit]:hover {
+  color: var(--tertiary-theme-color);
+  -webkit-transition: color 0.3s ease;
+  -moz-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+  background-color: var(--text-color);
+  -webkit-transition: background-color 0.6s ease;
+  -moz-transition: background-color 0.6s ease;
+  transition: background-color 0.6s ease;
+}
+
+input[type=radio],
+input[type=checkbox] {
+  width: 1rem;
+  height: 1rem;
+}
+
+.rounded-corners{
+  border-radius: 5px;
 }
