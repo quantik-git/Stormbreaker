@@ -58,7 +58,7 @@ Please have a look at the [LICENSE](https://github.com/quantik-git/framework/blo
 
 ---
 # Tools and articles that helped me
-Id like to thank to all the creators of these tool that were fundamental:
+Id like to thank to the creators of all of these tool that were fundamental:
 * [tota11y](http://khan.github.io/tota11y/)
 * [Writing HTML with Accessibility in Mind](https://medium.com/alistapart/writing-html-with-accessibility-in-mind-a62026493412)
 * [Writing CSS with Accessibility in Mind](https://medium.com/@matuzo/writing-css-with-accessibility-in-mind-8514a0007939)
