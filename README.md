@@ -58,7 +58,7 @@ Please have a look at the [LICENSE](https://github.com/quantik-git/framework/blo
 
 ---
 # Tools and articles that helped me
-Id like to thank to the creators of all of these tool that were fundamental:
+Id like to thank to the creators of all of these tool that were fundamental for this project:
 * [tota11y](http://khan.github.io/tota11y/)
 * [Writing HTML with Accessibility in Mind](https://medium.com/alistapart/writing-html-with-accessibility-in-mind-a62026493412)
 * [Writing CSS with Accessibility in Mind](https://medium.com/@matuzo/writing-css-with-accessibility-in-mind-8514a0007939)
@@ -66,17 +66,18 @@ Id like to thank to the creators of all of these tool that were fundamental:
 
 ---
 ## Objectives:
-- [x] Hamburger menu
-- [ ] Audio tag
-- [ ] Img tag responsive
-- [x] Form label
-- [ ] Form fieldset
-- [x] Form date
-- [x] Datetime tag
-- [x] Contrast colors hsl()?
 - [ ] Meaningfull anchor tags
 - [ ] Accesskey attribute
 - [ ] Tabindex? pode ser confuso
+- [ ] Audio tag
+- [ ] Img tag responsive
+- [ ] Iframe tag responsive
+- [ ] Form fieldset
+- [x] Hamburger menu
+- [x] Form label
+- [x] Form date
+- [x] Datetime tag
+- [x] Contrast colors hsl()?
 - [x] Create Screen Reader only class
 - [x] Basic site Layouts
 - [x] Sticky navbar
