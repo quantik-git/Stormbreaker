@@ -1,10 +1,10 @@
 $classe = $("body").attr('class');
 if($classe == "basic-sidebar-left"){
-  $sidebar = ".sidebar-left";
+  $sidebar = $(".sidebar-left");
   $side = "left";
   $openSign = ">";
   $closeSign = "<";
-  $btn = ".btn-sidebar-left";
+  $btn = $(".btn-sidebar-left");
 }else if($classe == "basic-sidebar-right"){
   $sidebar = $(".sidebar-right");
   $side = "right";
@@ -14,9 +14,15 @@ if($classe == "basic-sidebar-left"){
 }
 
 if($classe != "basic"){
+  $top = $('main').position().top;
+  if($('body').width() < 481){
+     $sidebar.css($side, 0);
+     $sidebar.css('top', $top);
+   }
   $(document).ready(function(){
+    
     $btn.css('background-color', $sidebar.css('background-color'));
-    $btn.css('top', $("header.head").height()+32+16+40);
+    $btn.css('top', $top + 40);
 
     /*Configuração do aspeto inicial*/
     if($('main').width() < 780){
@@ -40,10 +46,10 @@ if($classe != "basic"){
   /*Configuração da alteração de tamanho da janela*/
   $( window ).resize(function() {
     if($('main').width() < 780 && $sidebar.css('display') == 'grid'){
-      $sidebar.toggle();
+      $sidebar.hide();
       $btn.closing();
     }else if($sidebar.css('display') == 'grid'){
-      $btn.css($side, $sidebar.width()+32);/*update da largura*/
+      $btn.css($side, $sidebar.innerWidth());/*update da largura*/
     }
   });
 }
@@ -55,7 +61,7 @@ $.fn.closing = function() {
 };
 
 $.fn.opening = function() {
-  this.css($side, $sidebar.width()+32);
+  this.css($side, $sidebar.innerWidth());
   this.text($closeSign);
   this.attr('aria-pressed', 'false');
   $sidebar.attr('aria-expanded', 'true');
@@ -64,36 +70,38 @@ $.fn.opening = function() {
 /***********************************
  *        VERTICAL-NAVBAR          ************************************************************************************************************************************************************************************
  **********************************/
+$links = $('header.head > nav > ul.links-hover');
+
 $("#toggle").click(function(){
-  $(".links-hover").toggle();
+  $links.toggle();
 });
 
 $(document).ready(function(){
  //navbar responsive
-  if($('main').width() >= 450){
+  if($('body').width() >= 450){
      $("#toggle").hide();
   }else{
-    $('.links-hover').hide();
-    $('nav').switchClass('flexRow', 'flexCol');
-    $('.links-hover').switchClass('flexEnd', 'flexStart');
-    $('.links-hover').switchClass('flexRow', 'flexCol');
+    $links.hide();
+    $('.head > nav').switchClass('flexRow', 'flexCol');
+    $links.switchClass('flexEnd', 'flexStart');
+    $links.switchClass('flexRow', 'flexCol');
   }
 
 });
 
 $( window ).resize(function() {
-  if($('main').width() < 450){
+  if($('body').width() < 450){
     $("#toggle").show();
-    $('.links-hover').hide();
-    $('nav').switchClass('flexRow', 'flexCol');
-    $('.links-hover').switchClass('flexEnd', 'flexStart');
-    $('.links-hover').switchClass('flexRow', 'flexCol');
-  }else if($('main').width() >= 450) {
+    $links.hide();
+    $('.head > nav').switchClass('flexRow', 'flexCol');
+    $links.switchClass('flexEnd', 'flexStart');
+    $links.switchClass('flexRow', 'flexCol');
+  }else if($('body').width() >= 450) {
     $("#toggle").hide();
-    $('.links-hover').show();
-    $('nav').switchClass('flexCol', 'flexRow');
-    $('.links-hover').switchClass('flexStart', 'flexEnd');
-    $('.links-hover').switchClass('flexCol', 'flexRow');
+    $links.show();
+    $('.head > nav').switchClass('flexCol', 'flexRow');
+    $links.switchClass('flexStart', 'flexEnd');
+    $links.switchClass('flexCol', 'flexRow');
   }
 });
 
