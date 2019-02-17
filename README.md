@@ -63,6 +63,8 @@ Id like to thank to the creators of all of these tool that were fundamental for 
 * [Writing HTML with Accessibility in Mind](https://medium.com/alistapart/writing-html-with-accessibility-in-mind-a62026493412)
 * [Writing CSS with Accessibility in Mind](https://medium.com/@matuzo/writing-css-with-accessibility-in-mind-8514a0007939)
 * [How to design website layouts for screen readers](https://medium.freecodecamp.org/how-to-design-website-layouts-for-screen-readers-347b7b06e9cc)
+* [Modular Typographic Scale](https://www.modularscale.com/)
+* [Google Fonts](https://fonts.google.com/)
 
 ---
 ## Objectives:
