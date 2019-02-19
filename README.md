@@ -72,7 +72,7 @@ Id like to thank to the creators of all of these tool that were fundamental for 
 - [ ] Accesskey attribute
 - [ ] Tabindex? pode ser confuso
 - [ ] Audio tag
-- [ ] Img tag responsive
+- [x] Img tag responsive
 - [ ] Iframe tag responsive
 - [ ] Form fieldset
 - [x] Hamburger menu
