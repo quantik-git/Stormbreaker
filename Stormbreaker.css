@@ -165,9 +165,6 @@ button {
 /**********************************
  *          Tipografia             ************************************************************************************************************************************************************************************
  **********************************/
-/* Defining basic charateristics */
-/* melhorar os anchors definições específicas para navs e talvez adicionar highlighting nos anchors*/
-/* Typography */
 a{
   font-family: var(--title-font);
   font-weight:100;
@@ -251,7 +248,6 @@ blockquote {
 [lang="de"] blockquote{
   quotes: "\201e" "\201d";
 }
-/*Skeleton*/
 
 header,
 aside,
@@ -301,28 +297,6 @@ footer {
                        "footer footer";
 }
 
-/*full left-sidebar layout*/
-.full-sidebar-left {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  grid-template-rows: repeat(3, auto);
-  grid-gap: 1rem;
-  grid-template-areas: "sidebar-1 header"
-                       "sidebar-1 main"
-                       "footer footer";
-}
-
-/*Full layout*//*
-.full {
-  display: grid;
-  grid-template-columns: auto 1fr auto;
-  grid-template-rows: repeat(3, auto);
-  grid-gap: 1rem;
-  grid-template-areas: "header header header"
-                       "sidebar-1 main sidebar-2"
-                       "footer footer footer";
-}*/
-
 /* Naming the parts of the layout*/
 .head {
   grid-area: header;
@@ -354,11 +328,9 @@ body{
   background-color: white;
 }
 
-
 /* *********************************
  *          Navigation             ************************************************************************************************************************************************************************************
  **********************************/
-
 a,
 li {
   list-style: none;
@@ -367,10 +339,6 @@ li {
 }
 header a{
   padding: 1rem;
-}
-
-.imagem a{
-  margin: 2rem;
 }
 
 .links-hover a:hover {
@@ -385,6 +353,10 @@ header a{
     transition: color 0.3s ease;
 }
 
+#toggle{
+  padding: 0;
+}
+
 .sticky-top{
   top: 0;
   z-index: 2;
@@ -392,12 +364,14 @@ header a{
   width:100%;
 }
 
-
+.vertical-nav ul li a{
+  display: block;
+  padding: 0.3em 0.6em;
+}
 
 /***********************************
  *          Flex Classes           ************************************************************************************************************************************************************************************
  **********************************/
-
 .flexCenter{
   justify-content: center;
   align-self: center;
@@ -431,10 +405,10 @@ header a{
 .brand{
   flex:1;
 }
+
 /**********************************
  *            Cartões              ************************************************************************************************************************************************************************************
  **********************************/
-
 .card {
   display: grid;
   grid-template-rows: max-content 1fr;
@@ -468,4 +442,185 @@ figcaption{
 .card-reverse h2{
   background-color: var(--text-color);
   color: var(--main-theme-color);
+}
+
+/**********************************
+ *            Sidebar              ************************************************************************************************************************************************************************************
+ **********************************/
+.btn-sidebar-left{
+  height: 2em;
+  position: fixed;
+  z-index: 2;
+  padding-left: 0;
+  -webkit-border-top-right-radius: 15px;
+  -webkit-border-bottom-right-radius: 15px;
+  -moz-border-radius-topright: 15px;
+  -moz-border-radius-bottomright: 15px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.btn-sidebar-right{
+  height: 2em;
+  position: fixed;
+  z-index: 2;
+  padding-right: 0;
+  -webkit-border-top-left-radius: 15px;
+  -webkit-border-bottom-left-radius: 15px;
+  -moz-border-radius-topleft: 15px;
+  -moz-border-radius-bottomleft: 15px;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+
+/**********************************
+ *             Forms               ************************************************************************************************************************************************************************************
+ **********************************/
+input{
+  cursor: pointer;
+}
+
+input[type=file]{
+  width: 20em;
+}
+
+input[type=url],
+input[type=tel],
+input[type=text],
+input[type=time],
+input[type=week],
+input[type=date],
+input[type=range],
+input[type=month],
+input[type=email],
+input[type=number],
+input[type=search],
+input[type=password],
+input[type=datetime-local] {
+  height: 3rem;
+  width: 20em;
+  padding: 0 10px;
+  color:  var(--main-theme-color);
+  border: 4px solid #ccc;
+  font-size: 1.2em;
+  cursor: text;
+}
+
+input[type=reset],
+input[type=button],
+input[type=submit] {
+  height: 3rem;
+  width: 20em;
+  padding: 0 10px;
+  color: var(--text-color);
+  border: 4px solid #ccc;
+  font-size: 1.2em;
+  background-color: var(--tertiary-theme-color);
+}
+
+input[type=reset]:hover,
+input[type=button]:hover,
+input[type=submit]:hover {
+  color: var(--tertiary-theme-color);
+  -webkit-transition: color 0.3s ease;
+  -moz-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+  background-color: var(--text-color);
+  -webkit-transition: background-color 0.6s ease;
+  -moz-transition: background-color 0.6s ease;
+  transition: background-color 0.6s ease;
+}
+
+input[type=radio],
+input[type=checkbox] {
+  width: 1rem;
+  height: 1rem;
+}
+
+.rounded-corners{
+  border-radius: 5px;
+}
+
+/**********************************
+ *         Phone Styles            ************************************************************************************************************************************************************************************
+ **********************************/
+
+@media screen and (max-width: 481px){
+  .links-hover li a{
+    display: block;
+    padding: 0.3em 0.6em;
+    margin: 0 0.4em;
+  }
+  
+  h1{
+    font-size: 3.052em;
+  }
+  h2{
+    font-size: 2.441em;
+  }
+  h3{
+    font-size: 1.953em;
+  }
+  h4{
+    font-size: 1.563em;
+  }
+  h5{
+    font-size: 1.25em;
+  }
+  h6{
+    font-size: 1em;
+  }
+  
+  q, 
+  blockquote{
+    font-size: 1.25em;
+  }
+  
+  a{
+    font-weight:400;
+  }
+  .basic{
+    grid-gap: 0.5em;
+  }
+  .sidebar-right,
+  .sidebar-left{
+    position: fixed;
+    z-index: 2;
+  }
+  .basic-sidebar-right,
+  .basic-sidebar-left {
+    column-gap: 0;
+  }
+  input[type=file]{
+    width: 15em;
+  }
+  
+  input[type=url],
+  input[type=tel],
+  input[type=text],
+  input[type=time],
+  input[type=week],
+  input[type=date],
+  input[type=range],
+  input[type=month],
+  input[type=email],
+  input[type=number],
+  input[type=search],
+  input[type=password],
+  input[type=datetime-local] {
+    height: 2.5rem;
+    width: 15em;
+    padding: 0 10px;
+    border: 3px solid #ccc;
+    font-size: 1em;
+  }
+  input[type=reset],
+  input[type=button],
+  input[type=submit] {
+    width: 15em;
+    height: 2.5rem;
+    padding: 0 10px;
+    border: 3px solid #ccc;
+    font-size: 1em;
+  }
 }

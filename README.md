@@ -40,7 +40,7 @@ Let people know what your project can do specifically. Provide context and add a
 ---
 # Getting Started:
 To get started you can either download the whole project from this repository.\
-Or you can use the our github CDN and download the **variables.js** file to alter the variables.
+Or you can use the repo github CDN and download the **variables.js** file to alter the variables.
 ### CSS only:
 ```HTML
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/quantik-git/Stormbreaker/Stormbreaker.css">
@@ -57,18 +57,29 @@ Or you can use the our github CDN and download the **variables.js** file to alte
 Please have a look at the [LICENSE](https://github.com/quantik-git/framework/blob/WIP/LICENSE) for more details.
 
 ---
+# Tools and articles that helped me
+Id like to thank to the creators of all of these tool that were fundamental for this project:
+* [tota11y](http://khan.github.io/tota11y/)
+* [Writing HTML with Accessibility in Mind](https://medium.com/alistapart/writing-html-with-accessibility-in-mind-a62026493412)
+* [Writing CSS with Accessibility in Mind](https://medium.com/@matuzo/writing-css-with-accessibility-in-mind-8514a0007939)
+* [How to design website layouts for screen readers](https://medium.freecodecamp.org/how-to-design-website-layouts-for-screen-readers-347b7b06e9cc)
+* [Modular Typographic Scale](https://www.modularscale.com/)
+* [Google Fonts](https://fonts.google.com/)
+
+---
 ## Objectives:
-- [ ] Hamburger menu
-- [ ] Audio tag
-- [ ] Img tag responsive
-- [ ] Form label
-- [ ] Form fieldset
-- [ ] Form date
-- [ ] Datetime tag
-- [ ] Contrast colors hsl()?
 - [ ] Meaningfull anchor tags
 - [ ] Accesskey attribute
 - [ ] Tabindex? pode ser confuso
+- [ ] Audio tag
+- [x] Img tag responsive
+- [ ] Iframe tag responsive
+- [ ] Form fieldset
+- [x] Hamburger menu
+- [x] Form label
+- [x] Form date
+- [x] Datetime tag
+- [x] Contrast colors hsl()?
 - [x] Create Screen Reader only class
 - [x] Basic site Layouts
 - [x] Sticky navbar
