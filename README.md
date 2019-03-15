@@ -40,15 +40,15 @@ Let people know what your project can do specifically. Provide context and add a
 ---
 # Getting Started:
 To get started you can either download the whole project from this repository.\
-Or you can use the repo github CDN and download the **variables.js** file to alter the variables.
+Or you can use the github repo CDN and download the **variables.js** file to alter the variables.
 ### CSS only:
 ```HTML
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/quantik-git/Stormbreaker/Stormbreaker.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/quantik-git/Stormbreaker@latest/Stormbreaker.css">
 ```
 ### JS and jQuery:
 ```HTML
 <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-<script src="https://cdn.jsdelivr.net/gh/quantik-git/Stormbreaker/functionality.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/quantik-git/Stormbreaker@latest/functionality.js"></script>
 ```
 
 ---
@@ -68,13 +68,13 @@ Id like to thank to the creators of all of these tool that were fundamental for 
 
 ---
 ## Objectives:
-- [ ] Meaningfull anchor tags
-- [ ] Accesskey attribute
-- [ ] Tabindex? pode ser confuso
+- [x] Meaningfull anchor tags
+- [x] Accesskey attribute
+- [x] Tabindex? pode ser confuso
 - [ ] Audio tag
 - [x] Img tag responsive
 - [ ] Iframe tag responsive
-- [ ] Form fieldset
+- [x] Form fieldset
 - [x] Hamburger menu
 - [x] Form label
 - [x] Form date
