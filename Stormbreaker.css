@@ -14,6 +14,7 @@
   --text-font: 'Roboto', sans-serif; /*variable that defines general text font*/
 }
 
+/* Import fonts*/
 @import url(var(--font));
 
 /* Resets */
