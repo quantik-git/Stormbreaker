@@ -30,7 +30,9 @@
   <a href="#license">License</a>
 </p>
 
-![screenshot](https://media.giphy.com/media/8YmZM9ayQSzZU1i5A7/giphy.gif)
+<p align="center">
+  <img src="https://media.giphy.com/media/8YmZM9ayQSzZU1i5A7/giphy.gif" alt="Gif Stormbreaker">
+</p>
 
 ---
 # What can I do with this&#191;
