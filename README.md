@@ -57,6 +57,12 @@ Or you can use the github repo CDN and download the **variables.js** file to alt
 <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 <script src="https://cdn.jsdelivr.net/gh/quantik-git/Stormbreaker@latest/functionality.js"></script>
 ```
+### variables.js:
+```HTML
+<script src="variables.js" async></script>
+```
+Paste this before of the CSS CDN link to prevent visual bugs.\
+**Don't forget to include the `async` attribute to minimize loading time**
 
 ---
 # License
@@ -72,13 +78,14 @@ Id like to thank to the creators of all of these tool that were fundamental for 
 * [How to design website layouts for screen readers](https://medium.freecodecamp.org/how-to-design-website-layouts-for-screen-readers-347b7b06e9cc)
 * [Modular Typographic Scale](https://www.modularscale.com/)
 * [Google Fonts](https://fonts.google.com/)
+* [Javascript Async and Defer](https://flaviocopes.com/javascript-async-defer/)
 
 ---
 ## Objectives:
 - [x] Meaningfull anchor tags
 - [x] Accesskey attribute
 - [x] Tabindex? pode ser confuso
-- [ ] Audio tag
+- [x] Audio tag
 - [x] Img tag responsive
 - [ ] Iframe tag responsive
 - [x] Form fieldset
