@@ -10,9 +10,9 @@
 <h4 align="center">A framework focused on accessibility and customization</h4>
 
 [![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
-[![forthebadge](https://forthebadge.com/images/badges/validated-html5.svg)](https://forthebadge.com)
 [![forthebadge](https://forthebadge.com/images/badges/uses-css.svg)](https://forthebadge.com)
 [![forthebadge](https://forthebadge.com/images/badges/uses-html.svg)](https://forthebadge.com)
+[![forthebadge](https://forthebadge.com/images/badges/validated-html5.svg)](https://forthebadge.com)
 [![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)](https://forthebadge.com)
 
 <p align="center">
@@ -30,7 +30,9 @@
   <a href="#license">License</a>
 </p>
 
-![screenshot](https://raw.githubusercontent.com/amitmerchant1990/electron-markdownify/master/app/img/markdownify.gif)
+<p align="center">
+  <img src="https://media.giphy.com/media/8YmZM9ayQSzZU1i5A7/giphy.gif" alt="Gif Stormbreaker">
+</p>
 
 ---
 # What can I do with this&#191;
@@ -45,6 +47,13 @@ This framework allows for agile development when paired with the atom editor. A 
 Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
 
 ---
+# Browser Support
+
+![Chrome](https://raw.github.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png) | ![Firefox](https://raw.github.com/alrra/browser-logos/master/src/firefox/firefox_48x48.png) | ![Edge](https://raw.github.com/alrra/browser-logos/master/src/edge/edge_48x48.png) | ![IE](https://raw.github.com/alrra/browser-logos/master/src/archive/internet-explorer_9-11/internet-explorer_9-11_48x48.png) | ![Safari](https://raw.github.com/alrra/browser-logos/master/src/safari/safari_48x48.png) | ![Opera](https://raw.github.com/alrra/browser-logos/master/src/opera/opera_48x48.png)
+--- | --- | --- | --- | --- | --- |
+Latest ✔ | Latest ✔ | Latest ✔ | 11+ ✔ | 9.1+ ✔ | Latest ✔ |
+
+---
 # Getting Started:
 To get started you can either download the whole project from this repository.\
 Or you can use the github repo CDN and download the **variables.js** file to alter the variables.
@@ -57,6 +66,12 @@ Or you can use the github repo CDN and download the **variables.js** file to alt
 <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 <script src="https://cdn.jsdelivr.net/gh/quantik-git/Stormbreaker@latest/functionality.js"></script>
 ```
+### variables.js:
+```HTML
+<script src="variables.js" async></script>
+```
+Paste this before of the CSS CDN link to prevent visual bugs.\
+**Don't forget to include the `async` attribute to minimize loading time**
 
 ---
 # License
@@ -72,13 +87,14 @@ Id like to thank to the creators of all of these tool that were fundamental for 
 * [How to design website layouts for screen readers](https://medium.freecodecamp.org/how-to-design-website-layouts-for-screen-readers-347b7b06e9cc)
 * [Modular Typographic Scale](https://www.modularscale.com/)
 * [Google Fonts](https://fonts.google.com/)
+* [Javascript Async and Defer](https://flaviocopes.com/javascript-async-defer/)
 
 ---
 ## Objectives:
 - [x] Meaningfull anchor tags
 - [x] Accesskey attribute
 - [x] Tabindex? pode ser confuso
-- [ ] Audio tag
+- [x] Audio tag
 - [x] Img tag responsive
 - [ ] Iframe tag responsive
 - [x] Form fieldset
