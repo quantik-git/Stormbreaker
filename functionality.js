@@ -21,7 +21,7 @@ if (bodyLayoutClass !== "basic") {
   
  distanceTop = $mainElement.position().top;
   
-  if (bodyWidth < 481) {
+  if (bodyElement.width() < 481) {
     $sidebar.css($side, 0);
     $sidebar.css("top",distanceTop);
   }
@@ -89,7 +89,7 @@ $.fn.opening = function() {
  $navElement = $(".head > nav");
  $toggleButton = $("#toggle");
  
- bodyWidth = $("body").width();
+ bodyElement = $("body");
  const mobileMaxWidth = 480;
 
 $toggleButton.click(function() {
@@ -105,7 +105,7 @@ $toggleButton.click(function() {
 
 $(document).ready(function() {
   //navbar responsive
-  if (bodyWidth > mobileMaxWidth) {
+  if (bodyElement.width() > mobileMaxWidth) {
     $toggleButton.hide().attr("aria-pressed", "false");
   } else {
     $links.hide().attr("aria-expanded", "false");
@@ -117,13 +117,13 @@ $(document).ready(function() {
 });
 
 $(window).resize(function() {
-  if (bodyWidth <= mobileMaxWidth) {
+  if (bodyElement.width() <= mobileMaxWidth) {
     $toggleButton.show().attr("aria-pressed", "false");
     $links.hide().attr("aria-expanded", "true");
     $navElement.switchClass("flexRow", "flexCol");
     $links.switchClass("flexEnd", "flexStart");
     $links.switchClass("flexRow", "flexCol");
-  } else if (bodyWidth > mobileMaxWidth) {
+  } else {
     $toggleButton.hide().attr("aria-pressed", "true");
     $links.show().attr("aria-expanded", "false");
     $navElement.switchClass("flexCol", "flexRow");
