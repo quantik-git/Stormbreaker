@@ -1,6 +1,7 @@
 /***********************************
  *            SIDEBAR              ************************************************************************************************************************************************************************************
  **********************************/
+ bodyElement = $("body");
  $mainElement = $("main");
  bodyLayoutClass = $("body").attr("class"); /* bodyLayout */
 if (bodyLayoutClass === "basic-sidebar-left") {
@@ -89,7 +90,6 @@ $.fn.opening = function() {
  $navElement = $(".head > nav");
  $toggleButton = $("#toggle");
  
- bodyElement = $("body");
  const mobileMaxWidth = 480;
 
 $toggleButton.click(function() {
