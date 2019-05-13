@@ -336,7 +336,6 @@ footer {
 
 main {
   grid-area: main;
-  background-color: var(--tertiary-theme-color);
   background-image: var(--body-background);
 }
 
