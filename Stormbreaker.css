@@ -336,7 +336,6 @@ footer {
 
 main {
   grid-area: main;
-  background-color: var(--tertiary-theme-color);
   background-image: var(--body-background);
 }
 
@@ -448,7 +447,7 @@ header a {
   width: 100%;
   height: auto;
 }
-.card h2 {
+.card .card-header {
   text-align: center;
   font-size: 1.5em;
   margin: 0.2rem 0.5rem;
@@ -466,7 +465,7 @@ figcaption {
   background-color: var(--text-color);
   color: var(--main-theme-color);
 }
-.card-reverse h2 {
+.card-reverse .card-header {
   background-color: var(--text-color);
   color: var(--main-theme-color);
 }
@@ -584,7 +583,7 @@ fieldset {
 }
 
 /**********************************
- *       Video and Images         ************************************************************************************************************************************************************************************
+ *             Media               ************************************************************************************************************************************************************************************
  **********************************/
 img {
   width: 100%;
