@@ -1,16 +1,19 @@
+// Constants
+const NOT_FOUND = -1;
+
 /***********************************
  *            SIDEBAR              ************************************************************************************************************************************************************************************
  **********************************/
  bodyElement = $("body");
  $mainElement = $("main");
  bodyLayoutClass = $("body").attr("class"); /* bodyLayout */
-if (bodyLayoutClass.indexOf("basic-sidebar-left") !== -1) {
+if (bodyLayoutClass.indexOf("basic-sidebar-left") !== NOT_FOUND) {
   $sidebar = $(".sidebar-left");
   $side = "left";
   $openSign = ">";
   $closeSign = "<";
   $sidebarToggleButton = $(".btn-sidebar-left");
-} else if (bodyLayoutClass.indexOf("basic-sidebar-right") !== -1) {
+} else if (bodyLayoutClass.indexOf("basic-sidebar-right") !== NOT_FOUND) {
   $sidebar = $(".sidebar-right");
   $side = "right";
   $openSign = "<";
@@ -18,7 +21,7 @@ if (bodyLayoutClass.indexOf("basic-sidebar-left") !== -1) {
   $sidebarToggleButton = $(".btn-sidebar-right");
 }
 
-if (bodyLayoutClass.indexOf("basic") === -1) {
+if (bodyLayoutClass.indexOf("basic") === NOT_FOUND) {
 
  distanceTop = $mainElement.position().top;
 
@@ -156,26 +159,26 @@ const originalSecondaryThemeColor = getComputedStyle(document.documentElement).g
 const originalTertiaryThemeColor = getComputedStyle(document.documentElement).getPropertyValue("--tertiary-theme-color");
 const originalBodyBackground = getComputedStyle(document.documentElement).getPropertyValue("--body-background");
 
-let estadoBotaoContrast = 0;
+let estadoBotaoContrast = false;
 
 $(".contrast").click(function() {
-  if (estadoBotaoContrast === 0) {
+  if (estadoBotaoContrast === false) {
     root.style.setProperty("--text-color", "white");
     root.style.setProperty("--main-theme-color", "black");
     root.style.setProperty("--secondary-theme-color", "black");
     root.style.setProperty("--tertiary-theme-color", "black");
     root.style.setProperty("--body-background", "var(--main-theme-color)");
-    estadoBotaoContrast = 1;
+    estadoBotaoContrast = true;
   } else {
     root.style.setProperty("--text-color", originalTextColor);
     root.style.setProperty("--main-theme-color", originalMainThemeColor);
     root.style.setProperty("--secondary-theme-color", originalSecondaryThemeColor);
     root.style.setProperty("--tertiary-theme-color", originalTertiaryThemeColor);
     root.style.setProperty("--body-background", originalBodyBackground);
-    estadoBotaoContrast = 0;
+    estadoBotaoContrast = false;
   }
 
-  if (bodyLayoutClass.indexOf("basic") === -1) {
+  if (bodyLayoutClass.indexOf("basic") === NOT_FOUND) {
     $sidebarToggleButton.css("background-color", $sidebar.css("background-color"));
     $sidebarToggleButton.css("color", $sidebar.css("color"));
   }
@@ -184,16 +187,16 @@ $(".contrast").click(function() {
 /***********************************
  *          MAGNIFY CLASS         ************************************************************************************************************************************************************************************
  **********************************/
-let estadoBotaoMagnify = 0;
+let estadoBotaoMagnify = false;
 const originalFontSize = getComputedStyle(document.documentElement).getPropertyValue("--font-size");
 
 $(".magnify").click(function() {
-  if (estadoBotaoMagnify === 0) {
+  if (estadoBotaoMagnify === false) {
     root.style.setProperty("--font-size", " 25px");
-    estadoBotaoMagnify = 1;
+    estadoBotaoMagnify = true;
   } else {
     root.style.setProperty("--font-size", originalFontSize);
-    estadoBotaoMagnify = 0;
+    estadoBotaoMagnify = false;
   }
   for(let i = 0; i < 300; i += 10) {
     setTimeout(function(){updateButtonWidth();}, i);
