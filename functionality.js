@@ -4,13 +4,13 @@
  bodyElement = $("body");
  $mainElement = $("main");
  bodyLayoutClass = $("body").attr("class"); /* bodyLayout */
-if (bodyLayoutClass === "basic-sidebar-left") {
+if (bodyLayoutClass.indexOf("basic-sidebar-left") !== -1) {
   $sidebar = $(".sidebar-left");
   $side = "left";
   $openSign = ">";
   $closeSign = "<";
   $sidebarToggleButton = $(".btn-sidebar-left");
-} else if (bodyLayoutClass === "basic-sidebar-right") {
+} else if (bodyLayoutClass.indexOf("basic-sidebar-right") !== -1) {
   $sidebar = $(".sidebar-right");
   $side = "right";
   $openSign = "<";
@@ -18,15 +18,15 @@ if (bodyLayoutClass === "basic-sidebar-left") {
   $sidebarToggleButton = $(".btn-sidebar-right");
 }
 
-if (bodyLayoutClass !== "basic") {
-  
+if (bodyLayoutClass.indexOf("basic") === -1) {
+
  distanceTop = $mainElement.position().top;
-  
+
   if (bodyElement.width() < 481) {
     $sidebar.css($side, 0);
     $sidebar.css("top",distanceTop);
   }
-  
+
   $(document).ready(function() {
     $sidebarToggleButton.css("background-color", $sidebar.css("background-color"));
     $sidebarToggleButton.css("top",distanceTop + 40);
@@ -50,7 +50,7 @@ if (bodyLayoutClass !== "basic") {
       });
     });
   });
-  
+
   /*Configuração da alteração de tamanho da janela*/
   $(window).resize(function() {
     if ($sidebar.css("display") === "grid") {
@@ -89,7 +89,7 @@ $.fn.opening = function() {
  $links = $("header.head > nav > ul.links-hover");
  $navElement = $(".head > nav");
  $toggleButton = $("#toggle");
- 
+
  const mobileMaxWidth = 480;
 
 $toggleButton.click(function() {
@@ -174,8 +174,8 @@ $(".contrast").click(function() {
     root.style.setProperty("--body-background", originalBodyBackground);
     estadoBotaoContrast = 0;
   }
-  
-  if (bodyLayoutClass !== "basic") {
+
+  if (bodyLayoutClass.indexOf("basic") === -1) {
     $sidebarToggleButton.css("background-color", $sidebar.css("background-color"));
     $sidebarToggleButton.css("color", $sidebar.css("color"));
   }
