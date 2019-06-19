@@ -152,31 +152,10 @@ $.fn.switchClass = function(previous, next) {
  if (typeof root === 'undefined') {
    const root = document.querySelector(":root");
  }
-const computedStyles = getComputedStyle(document.documentElement);
-const originalTextColor = computedStyles.getPropertyValue("--text-color");
-const originalMainThemeColor = getComputedStyle(document.documentElement).getPropertyValue("--main-theme-color");
-const originalSecondaryThemeColor = getComputedStyle(document.documentElement).getPropertyValue("--secondary-theme-color");
-const originalTertiaryThemeColor = getComputedStyle(document.documentElement).getPropertyValue("--tertiary-theme-color");
-const originalBodyBackground = getComputedStyle(document.documentElement).getPropertyValue("--body-background");
-
-let estadoBotaoContrast = false;
 
 $(".contrast").click(function() {
-  if (estadoBotaoContrast === false) {
-    root.style.setProperty("--text-color", "white");
-    root.style.setProperty("--main-theme-color", "black");
-    root.style.setProperty("--secondary-theme-color", "black");
-    root.style.setProperty("--tertiary-theme-color", "black");
-    root.style.setProperty("--body-background", "var(--main-theme-color)");
-    estadoBotaoContrast = true;
-  } else {
-    root.style.setProperty("--text-color", originalTextColor);
-    root.style.setProperty("--main-theme-color", originalMainThemeColor);
-    root.style.setProperty("--secondary-theme-color", originalSecondaryThemeColor);
-    root.style.setProperty("--tertiary-theme-color", originalTertiaryThemeColor);
-    root.style.setProperty("--body-background", originalBodyBackground);
-    estadoBotaoContrast = false;
-  }
+  $("body").toggleClass(".contrast-vars");// todo trocar $("body") por var
+
 
   if (bodyLayoutClass.indexOf("basic") === NOT_FOUND) {
     $sidebarToggleButton.css("background-color", $sidebar.css("background-color"));
