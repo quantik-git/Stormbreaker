@@ -25,7 +25,7 @@
   --main-theme-color: #000000;
   --secondary-theme-color: #000000;
   --tertiary-theme-color: #000000;
-  --body-background: #000000;
+  --body-background: var(--main-theme-color);
 }
 
 /* Import fonts */
