@@ -150,7 +150,7 @@ $.fn.switchClass = function(previous, next) {
  *          CONTRAST CLASS         ************************************************************************************************************************************************************************************
  **********************************/
 $(".contrast").click(function() {
-  $("body").toggleClass("contrast-vars");// todo trocar $("body") por var
+  $("html").toggleClass("contrast-vars");// todo trocar $("body") por var
 
 // todo tentar tirar isto definir a cor através das variáveis no main css
   if (bodyLayoutClass.indexOf("basic") === NOT_FOUND) {
@@ -168,6 +168,7 @@ if (typeof root === 'undefined') {
 let estadoBotaoMagnify = false;
 const originalFontSize = getComputedStyle(document.documentElement).getPropertyValue("--font-size");
 
+/*
 $(".magnify").click(function() {
   if (estadoBotaoMagnify === false) {
     root.style.setProperty("--font-size", " 25px");
@@ -176,6 +177,28 @@ $(".magnify").click(function() {
     root.style.setProperty("--font-size", originalFontSize);
     estadoBotaoMagnify = false;
   }
+  for(let i = 0; i < 300; i += 10) {
+    setTimeout(function(){updateButtonWidth();}, i);
+  }
+});*/
+
+$(".plus").click(function() {
+  let fontSize = $("p").css('font-size');
+  fontSize = parseFloat(fontSize);
+  fontSize += 1;
+  root.style.setProperty("--font-size", fontSize + "px");
+
+  for(let i = 0; i < 300; i += 10) {
+    setTimeout(function(){updateButtonWidth();}, i);
+  }
+});
+
+$(".minus").click(function() {
+  let fontSize = $("p").css('font-size');
+  fontSize = parseFloat(fontSize);
+  fontSize -= 1;
+  root.style.setProperty("--font-size", fontSize + "px");
+
   for(let i = 0; i < 300; i += 10) {
     setTimeout(function(){updateButtonWidth();}, i);
   }
