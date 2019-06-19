@@ -149,57 +149,43 @@ $.fn.switchClass = function(previous, next) {
 /***********************************
  *          CONTRAST CLASS         ************************************************************************************************************************************************************************************
  **********************************/
-$(".contrast").click(function() {
-  $("html").toggleClass("contrast-vars");// todo trocar $("body") por var
+ $(".contrast").click(function() {
+   $("html").toggleClass("contrast-vars");// todo trocar $("body") por var
 
-// todo tentar tirar isto definir a cor através das variáveis no main css
-  if (bodyLayoutClass.indexOf("basic") === NOT_FOUND) {
-    $sidebarToggleButton.css("background-color", $sidebar.css("background-color"));
-    $sidebarToggleButton.css("color", $sidebar.css("color"));
-  }
-});
+   if (bodyLayoutClass.indexOf("basic") === NOT_FOUND) {
+     $sidebarToggleButton.css("background-color", $sidebar.css("background-color"));
+     $sidebarToggleButton.css("color", $sidebar.css("color"));
+   }
+ });
 
 /***********************************
  *          MAGNIFY CLASS         ************************************************************************************************************************************************************************************
  **********************************/
-if (typeof root === 'undefined') {
- const root = document.querySelector(":root");
-}
-let estadoBotaoMagnify = false;
-const originalFontSize = getComputedStyle(document.documentElement).getPropertyValue("--font-size");
-
-/*
-$(".magnify").click(function() {
-  if (estadoBotaoMagnify === false) {
-    root.style.setProperty("--font-size", " 25px");
-    estadoBotaoMagnify = true;
-  } else {
-    root.style.setProperty("--font-size", originalFontSize);
-    estadoBotaoMagnify = false;
-  }
-  for(let i = 0; i < 300; i += 10) {
-    setTimeout(function(){updateButtonWidth();}, i);
-  }
-});*/
+ const root = document.querySelector("html");
+ let fontSize;
 
 $(".plus").click(function() {
-  let fontSize = $("p").css('font-size');
+  fontSize = $("p").css('font-size');
   fontSize = parseFloat(fontSize);
   fontSize += 1;
   root.style.setProperty("--font-size", fontSize + "px");
 
-  for(let i = 0; i < 300; i += 10) {
-    setTimeout(function(){updateButtonWidth();}, i);
+  if (bodyLayoutClass.indexOf("basic") === NOT_FOUND) {
+    for(let i = 0; i < 300; i += 10) {
+      setTimeout(function(){updateButtonWidth();}, i);
+    }
   }
 });
 
 $(".minus").click(function() {
-  let fontSize = $("p").css('font-size');
+  fontSize = $("p").css('font-size');
   fontSize = parseFloat(fontSize);
   fontSize -= 1;
   root.style.setProperty("--font-size", fontSize + "px");
 
-  for(let i = 0; i < 300; i += 10) {
-    setTimeout(function(){updateButtonWidth();}, i);
+  if (bodyLayoutClass.indexOf("basic") === NOT_FOUND) {
+    for(let i = 0; i < 300; i += 10) {
+      setTimeout(function(){updateButtonWidth();}, i);
+    }
   }
 });
