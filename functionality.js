@@ -150,8 +150,9 @@ $.fn.switchClass = function(previous, next) {
  *          CONTRAST CLASS         ************************************************************************************************************************************************************************************
  **********************************/
 $(".contrast").click(function() {
-  $("body").toggleClass(".contrast-vars");// todo trocar $("body") por var
+  $("body").toggleClass("contrast-vars");// todo trocar $("body") por var
 
+// todo tentar tirar isto definir a cor através das variáveis no main css
   if (bodyLayoutClass.indexOf("basic") === NOT_FOUND) {
     $sidebarToggleButton.css("background-color", $sidebar.css("background-color"));
     $sidebarToggleButton.css("color", $sidebar.css("color"));
