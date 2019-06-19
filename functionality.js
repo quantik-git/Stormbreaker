@@ -149,13 +149,8 @@ $.fn.switchClass = function(previous, next) {
 /***********************************
  *          CONTRAST CLASS         ************************************************************************************************************************************************************************************
  **********************************/
- if (typeof root === 'undefined') {
-   const root = document.querySelector(":root");
- }
-
 $(".contrast").click(function() {
   $("body").toggleClass(".contrast-vars");// todo trocar $("body") por var
-
 
   if (bodyLayoutClass.indexOf("basic") === NOT_FOUND) {
     $sidebarToggleButton.css("background-color", $sidebar.css("background-color"));
@@ -166,6 +161,9 @@ $(".contrast").click(function() {
 /***********************************
  *          MAGNIFY CLASS         ************************************************************************************************************************************************************************************
  **********************************/
+if (typeof root === 'undefined') {
+ const root = document.querySelector(":root");
+}
 let estadoBotaoMagnify = false;
 const originalFontSize = getComputedStyle(document.documentElement).getPropertyValue("--font-size");
 
