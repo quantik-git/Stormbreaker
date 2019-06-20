@@ -93,7 +93,7 @@ $.fn.opening = function() {
  $navElement = $(".head > nav");
  $toggleButton = $("#toggle");
 
- const mobileMaxWidth = 480;
+ const mobileMaxWidth = $links.width();
 
 $toggleButton.click(function() {
   $links.toggle();
