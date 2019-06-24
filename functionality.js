@@ -142,15 +142,14 @@ $.fn.switchClass = function(previous, next) {
 /***********************************
  *          FILL CLASS             ************************************************************************************************************************************************************************************
  **********************************/
- $fillClass = $(".fill");
  height = $(window).height() - ($("body").height() - $mainElement.innerHeight());
- $fillClass.css("min-height", height);
+ $(".fill").css("min-height", height);
 
 /***********************************
  *          CONTRAST CLASS         ************************************************************************************************************************************************************************************
  **********************************/
  $(".contrast").click(function() {
-   $("html").toggleClass("contrast-vars");// todo trocar $("body") por var
+   $("html").toggleClass("contrast-vars");// todo trocar $("html") por var
 
    if (bodyLayoutClass.indexOf("basic") === NOT_FOUND) {
      $sidebarToggleButton.css("background-color", $sidebar.css("background-color"));
