@@ -164,28 +164,15 @@ $.fn.switchClass = function(previous, next) {
  const root = document.querySelector("html");
  let fontSize;
 
-$(".plus").click(function() {
-  fontSize = $("p").css('font-size');
-  fontSize = parseFloat(fontSize);
-  fontSize += 1;
-  root.style.setProperty("--font-size", fontSize + "px");
+ $(".plus, .minus").click(function() {
+   fontSize = $("p").css('font-size');
+   fontSize = parseFloat(fontSize);
+   ($(this).hasClass("plus")) ? fontSize += 1 : fontSize -= 1 ;
+   root.style.setProperty("--font-size", fontSize + "px");
 
-  if (bodyLayoutClass.indexOf("basic") === NOT_FOUND) {
-    for(let i = 0; i < 300; i += 10) {
-      setTimeout(function(){updateButtonWidth();}, i);
-    }
-  }
-});
-
-$(".minus").click(function() {
-  fontSize = $("p").css('font-size');
-  fontSize = parseFloat(fontSize);
-  fontSize -= 1;
-  root.style.setProperty("--font-size", fontSize + "px");
-
-  if (bodyLayoutClass.indexOf("basic") === NOT_FOUND) {
-    for(let i = 0; i < 300; i += 10) {
-      setTimeout(function(){updateButtonWidth();}, i);
-    }
-  }
-});
+   if (bodyLayoutClass.indexOf("basic") === NOT_FOUND) {
+     for(let i = 0; i < 300; i += 10) {
+       setTimeout(function(){updateButtonWidth();}, i);
+     }
+   }
+ });
