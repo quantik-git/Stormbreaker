@@ -21,8 +21,7 @@ if (bodyLayoutClass.indexOf("basic-sidebar-left") !== NOT_FOUND) {
   $sidebarToggleButton = $(".btn-sidebar-right");
 }
 
-if (bodyLayoutClass.indexOf("basic") === NOT_FOUND) {
-
+if (bodyLayoutClass.indexOf("basic-sidebar") !== NOT_FOUND) {
  distanceTop = $mainElement.position().top;
 
   if (bodyElement.width() < 481) {
@@ -31,8 +30,7 @@ if (bodyLayoutClass.indexOf("basic") === NOT_FOUND) {
   }
 
   $(document).ready(function() {
-    $sidebarToggleButton.css("background-color", $sidebar.css("background-color"));
-    $sidebarToggleButton.css("top",distanceTop + 40);
+    $sidebarToggleButton.css("top", distanceTop + 40);
 
     /*Configuração do aspeto inicial*/
     if ($mainElement.width() < 780) {
@@ -150,11 +148,6 @@ $.fn.switchClass = function(previous, next) {
  **********************************/
  $(".contrast").click(function() {
    $("html").toggleClass("contrast-vars");// todo trocar $("html") por var
-
-   if (bodyLayoutClass.indexOf("basic") === NOT_FOUND) {
-     $sidebarToggleButton.css("background-color", $sidebar.css("background-color"));
-     $sidebarToggleButton.css("color", $sidebar.css("color"));
-   }
  });
 
 /***********************************
