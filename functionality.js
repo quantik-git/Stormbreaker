@@ -154,7 +154,7 @@ $.fn.switchClass = function(previous, next) {
  *          MAGNIFY CLASS         ************************************************************************************************************************************************************************************
  **********************************/
  const root = document.querySelector("html");
- let fontSize;
+ let fontSize = null;
 
  $(".plus, .minus").click(function() {
    fontSize = $("p").css('font-size');
