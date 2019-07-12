@@ -18,6 +18,8 @@ html {
   --font-size: 16px;
   /* Layout Grid-gap */
   --grid-gap: 1rem;
+  /* Name of website*/
+  --website-name: 'mywebsite.com'
 }
 /* CONTRAST */
 .contrast-vars {
@@ -114,7 +116,7 @@ button {
   nav {
     display: none;
   }
-  a[href^="http"]:not([href*="mywebsite.com"])::after {
+  a[href^="http"]:not([href*=--website-name])::after {
     content: " (" attr(href) ")";
   }
 }
