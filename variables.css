@@ -1,0 +1,20 @@
+:root {
+  /* Grid */
+  --grid-columns: 12;
+  /* Colors */
+  --text-color: #FFFFFF;
+  --main-theme-color: hsla(200,70%,40%,1);
+  --secondary-theme-color: #3C3C3C;
+  --tertiary-theme-color: #26F596;
+  --body-background: linear-gradient(315deg, var(--tertiary-theme-color) 0%, var(--main-theme-color) 74%);/* Can be replaced by a gradient or a image */
+  /* Font */
+  --font: //fonts.googleapis.com/css?family=Montserrat%7CRoboto;
+  --title-font: 'Montserrat', sans-serif; /* variable that defines title and subheads font */
+  --text-font: 'Roboto', sans-serif; /* variable that defines general text font */
+  /* Font Size */
+  --font-size: 16px;
+  /* Layout Grid-gap */
+  --grid-gap: 1rem;
+  /* Name of website*/
+  --website-name: 'mywebsite.com'
+}

@@ -54,22 +54,21 @@ Latest ✔ | Latest ✔ | Latest ✔ | 11+ ✔ | 9.1+ ✔ | Latest ✔ |
 ---
 # Getting Started:
 To get started you can either download the whole project from this repository.\
-Or you can use the github repo CDN and download the **variables.js** file to alter the variables.
+Or you can use the github repo CDN and download the **variables.css** file to alter the variables.
 ### CSS only:
 ```HTML
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/quantik-git/Stormbreaker@latest/Stormbreaker.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/quantik-git/Stormbreaker@master/Stormbreaker.min.css">
 ```
 ### JS and jQuery:
 ```HTML
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js" defer></script>
-<script src="https://cdn.jsdelivr.net/gh/quantik-git/Stormbreaker@latest/functionality.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/gh/quantik-git/Stormbreaker@master/functionality.min.js" defer></script>
 ```
-### variables.js:
+### variables.css:
 ```HTML
-<script src="variables.js" async></script>
+<link rel="stylesheet" href="variables.css">
 ```
-Paste this before of the CSS CDN link to prevent visual bugs.\
-**Don't forget to include the `async` attribute to minimize loading time**
+Where you put the file link is irrelevant since the variables in the **variables.css** file have higher specificity.
 
 ---
 # License
@@ -78,7 +77,7 @@ Please have a look at the [LICENSE](https://github.com/quantik-git/framework/blo
 
 ---
 # Tools and articles that helped me
-Id like to thank to the creators of all of these tool that were fundamental for this project:
+I'd like to thank to the creators of all of these tool that were fundamental for this project:
 * [tota11y](http://khan.github.io/tota11y/)
 * [Writing HTML with Accessibility in Mind](https://medium.com/alistapart/writing-html-with-accessibility-in-mind-a62026493412)
 * [Writing CSS with Accessibility in Mind](https://medium.com/@matuzo/writing-css-with-accessibility-in-mind-8514a0007939)

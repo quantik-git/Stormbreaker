@@ -1,16 +1,19 @@
+// Constants
+const NOT_FOUND = -1;
+
 /***********************************
  *            SIDEBAR              ************************************************************************************************************************************************************************************
  **********************************/
  bodyElement = $("body");
  $mainElement = $("main");
  bodyLayoutClass = $("body").attr("class"); /* bodyLayout */
-if (bodyLayoutClass.indexOf("basic-sidebar-left") !== -1) {
+if (bodyLayoutClass.indexOf("basic-sidebar-left") !== NOT_FOUND) {
   $sidebar = $(".sidebar-left");
   $side = "left";
   $openSign = ">";
   $closeSign = "<";
   $sidebarToggleButton = $(".btn-sidebar-left");
-} else if (bodyLayoutClass.indexOf("basic-sidebar-right") !== -1) {
+} else if (bodyLayoutClass.indexOf("basic-sidebar-right") !== NOT_FOUND) {
   $sidebar = $(".sidebar-right");
   $side = "right";
   $openSign = "<";
@@ -18,8 +21,7 @@ if (bodyLayoutClass.indexOf("basic-sidebar-left") !== -1) {
   $sidebarToggleButton = $(".btn-sidebar-right");
 }
 
-if (bodyLayoutClass.indexOf("basic") === -1) {
-
+if (bodyLayoutClass.indexOf("basic-sidebar") !== NOT_FOUND) {
  distanceTop = $mainElement.position().top;
 
   if (bodyElement.width() < 481) {
@@ -28,8 +30,7 @@ if (bodyLayoutClass.indexOf("basic") === -1) {
   }
 
   $(document).ready(function() {
-    $sidebarToggleButton.css("background-color", $sidebar.css("background-color"));
-    $sidebarToggleButton.css("top",distanceTop + 40);
+    $sidebarToggleButton.css("top", distanceTop + 40);
 
     /*Configuração do aspeto inicial*/
     if ($mainElement.width() < 780) {
@@ -90,7 +91,7 @@ $.fn.opening = function() {
  $navElement = $(".head > nav");
  $toggleButton = $("#toggle");
 
- const mobileMaxWidth = 480;
+ let mobileMaxWidth = ($links.width() + $('ul.brand > li').width()) * 1.1;
 
 $toggleButton.click(function() {
   $links.toggle();
@@ -139,63 +140,31 @@ $.fn.switchClass = function(previous, next) {
 /***********************************
  *          FILL CLASS             ************************************************************************************************************************************************************************************
  **********************************/
- $fillClass = $(".fill");
  height = $(window).height() - ($("body").height() - $mainElement.innerHeight());
- $fillClass.css("min-height", height);
+ $(".fill").css("min-height", height);
 
 /***********************************
  *          CONTRAST CLASS         ************************************************************************************************************************************************************************************
  **********************************/
- if (typeof root === 'undefined') {
-   const root = document.querySelector(":root");
- }
-const computedStyles = getComputedStyle(document.documentElement);
-const originalTextColor = computedStyles.getPropertyValue("--text-color");
-const originalMainThemeColor = getComputedStyle(document.documentElement).getPropertyValue("--main-theme-color");
-const originalSecondaryThemeColor = getComputedStyle(document.documentElement).getPropertyValue("--secondary-theme-color");
-const originalTertiaryThemeColor = getComputedStyle(document.documentElement).getPropertyValue("--tertiary-theme-color");
-const originalBodyBackground = getComputedStyle(document.documentElement).getPropertyValue("--body-background");
-
-let estadoBotaoContrast = 0;
-
-$(".contrast").click(function() {
-  if (estadoBotaoContrast === 0) {
-    root.style.setProperty("--text-color", "white");
-    root.style.setProperty("--main-theme-color", "black");
-    root.style.setProperty("--secondary-theme-color", "black");
-    root.style.setProperty("--tertiary-theme-color", "black");
-    root.style.setProperty("--body-background", "var(--main-theme-color)");
-    estadoBotaoContrast = 1;
-  } else {
-    root.style.setProperty("--text-color", originalTextColor);
-    root.style.setProperty("--main-theme-color", originalMainThemeColor);
-    root.style.setProperty("--secondary-theme-color", originalSecondaryThemeColor);
-    root.style.setProperty("--tertiary-theme-color", originalTertiaryThemeColor);
-    root.style.setProperty("--body-background", originalBodyBackground);
-    estadoBotaoContrast = 0;
-  }
-
-  if (bodyLayoutClass.indexOf("basic") === -1) {
-    $sidebarToggleButton.css("background-color", $sidebar.css("background-color"));
-    $sidebarToggleButton.css("color", $sidebar.css("color"));
-  }
-});
+ $(".contrast").click(function() {
+   $("html").toggleClass("contrast-vars");// todo trocar $("html") por var
+ });
 
 /***********************************
  *          MAGNIFY CLASS         ************************************************************************************************************************************************************************************
  **********************************/
-let estadoBotaoMagnify = 0;
-const originalFontSize = getComputedStyle(document.documentElement).getPropertyValue("--font-size");
+ const root = document.querySelector("html");
+ let fontSize = null;
 
-$(".magnify").click(function() {
-  if (estadoBotaoMagnify === 0) {
-    root.style.setProperty("--font-size", " 25px");
-    estadoBotaoMagnify = 1;
-  } else {
-    root.style.setProperty("--font-size", originalFontSize);
-    estadoBotaoMagnify = 0;
-  }
-  for(let i = 0; i < 300; i += 10) {
-    setTimeout(function(){updateButtonWidth();}, i);
-  }
-});
+ $(".plus, .minus").click(function() {
+   fontSize = $("p").css('font-size');
+   fontSize = parseFloat(fontSize);
+   ($(this).hasClass("plus")) ? fontSize += 1 : fontSize -= 1 ;
+   root.style.setProperty("--font-size", fontSize + "px");
+
+   if (bodyLayoutClass.indexOf("basic") === NOT_FOUND) {
+     for(let i = 0; i < 300; i += 10) {
+       setTimeout(function(){updateButtonWidth();}, i);
+     }
+   }
+ });
