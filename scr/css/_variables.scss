@@ -1,6 +1,10 @@
 /***********************************
  *          Variables              ************************************************************************************************************************************************************************************
  **********************************/
+
+/* Import fonts */
+@import url(//fonts.googleapis.com/css?family=Montserrat%7CRoboto);
+
 html {
   /* Grid */
   --grid-columns: 12;
@@ -11,7 +15,6 @@ html {
   --tertiary-theme-color: #26F596;
   --body-background: linear-gradient(315deg, var(--tertiary-theme-color) 0%, var(--main-theme-color) 74%);/* Can be replaced by a gradient or a image */
   /* Font */
-  --font: //fonts.googleapis.com/css?family=Montserrat%7CRoboto;
   --title-font: 'Montserrat', sans-serif; /* variable that defines title and subheads font */
   --text-font: 'Roboto', sans-serif; /* variable that defines general text font */
   /* Font Size */
@@ -28,6 +31,3 @@ html {
   --secondary-theme-color: #000000;
   --tertiary-theme-color: #000000;
 }
-
-/* Import fonts */
-@import url(var(--font));
