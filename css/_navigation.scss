@@ -1,0 +1,45 @@
+/***********************************
+ *          Navigation             ************************************************************************************************************************************************************************************
+ **********************************/
+a,
+li {
+  list-style: none;
+  text-decoration: none;
+  color: var(--text-color);
+}
+header a {
+  padding: 1rem;
+}
+
+.links-hover a:hover {
+  background-color: var(--text-color);
+  -webkit-transition: background-color 0.6s ease;
+  -moz-transition: background-color 0.6s ease;
+  transition: background-color 0.6s ease;
+
+  color: var(--main-theme-color);
+  -webkit-transition: color 0.3s ease;
+  -moz-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+}
+
+#toggle {
+  padding: 0;
+  border: none;
+  width: auto;
+  height: auto;
+  color: var(--text-color);
+  background-color: initial;
+}
+
+.sticky-top {
+  top: 0;
+  z-index: 2;
+  position: sticky;
+  width:100%;
+}
+
+.vertical-nav ul li a {
+  display: block;
+  padding: 0.3em 0.6em;
+}

@@ -1,0 +1,36 @@
+/***********************************
+ *          Flex Classes           ************************************************************************************************************************************************************************************
+ **********************************/
+.flexCenter {
+  justify-content: center;
+  align-self: center;
+}
+
+.flexStart {
+  justify-content: flex-start;
+  align-self: flex-start;
+}
+
+.flexEnd {
+  justify-content: flex-end;
+  align-self: flex-end;
+}
+
+.flexSpaceAround {
+  justify-content: space-around;
+  align-self: space-around;
+}
+
+.flexRow {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.flexCol {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.brand {
+  flex:1;
+}

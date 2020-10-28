@@ -1,0 +1,38 @@
+/**********************************
+ *             Cards              ************************************************************************************************************************************************************************************
+ **********************************/
+.card {
+  display: grid;
+  grid-template-rows: max-content 1fr;
+  border: solid var(--text-color);
+  margin: 1rem;
+  padding: 0;
+  width:200px;
+}
+.card img {
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+}
+.card .card-header {
+  text-align: center;
+  font-size: 1.5em;
+  margin: 0.2rem 0.5rem;
+}
+.card header {
+  background-color: transparent;
+  padding: 0;
+}
+figcaption {
+  margin: 0 0.5em 0.5em;
+  text-align:justify;
+}
+
+.card-reverse {
+  background-color: var(--text-color);
+  color: var(--main-theme-color);
+}
+.card-reverse .card-header {
+  background-color: var(--text-color);
+  color: var(--main-theme-color);
+}

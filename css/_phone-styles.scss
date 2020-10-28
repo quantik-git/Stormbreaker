@@ -1,0 +1,96 @@
+/**********************************
+ *         Phone Styles            ************************************************************************************************************************************************************************************
+ **********************************/
+@media screen and (max-width: 480px) {
+  .links-hover li a {
+    display: block;
+    padding: 0.3em 0.6em;
+    margin: 0 1.2em;
+    border-left: var(--text-color) solid 2px;
+  }
+
+  .links-hover li:first-child {
+    margin-top: 0.5em;
+  }
+
+  .h1,
+  h1 {
+    font-size: 3.052em;
+  }
+  .h2,
+  h2 {
+    font-size: 2.441em;
+  }
+  .h3,
+  h3 {
+    font-size: 1.953em;
+  }
+  .h4,
+  h4 {
+    font-size: 1.563em;
+  }
+  .h5,
+  h5 {
+    font-size: 1.25em;
+  }
+  .h6,
+  h6 {
+    font-size: 1em;
+  }
+
+  q,
+  blockquote {
+    font-size: 1.25em;
+  }
+
+  a {
+    font-weight:400;
+  }
+  .basic,
+  .basic-sidebar-right,
+  .basic-sidebar-left {
+    grid-gap: calc(var(--grid-gap)/2);
+  }
+  .sidebar-right,
+  .sidebar-left {
+    position: fixed;
+    z-index: 2;
+  }
+  .basic-sidebar-right,
+  .basic-sidebar-left {
+    column-gap: 0;
+  }
+  input[type=file] {
+    width: 15em;
+  }
+  select,
+  input[type=url],
+  input[type=tel],
+  input[type=text],
+  input[type=time],
+  input[type=week],
+  input[type=date],
+  input[type=range],
+  input[type=month],
+  input[type=email],
+  input[type=number],
+  input[type=search],
+  input[type=password],
+  input[type=datetime-local] {
+    height: 2.5rem;
+    width: 15em;
+    padding: 0 10px;
+    border: 3px solid #ccc;
+    font-size: 1em;
+  }
+  button,
+  input[type=reset],
+  input[type=button],
+  input[type=submit] {
+    width: 15em;
+    height: 2.5rem;
+    padding: 0 10px;
+    border: 3px solid #ccc;
+    font-size: 1em;
+  }
+}

@@ -1,0 +1,66 @@
+/* *********************************
+ *            Layout                ************************************************************************************************************************************************************************************
+ **********************************/
+/* Basic layout */
+.basic {
+  display: flex;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: repeat(3, auto);
+  grid-gap: var(--grid-gap);
+  grid-template-areas: "header"
+                       "main"
+                       "footer";
+}
+
+/* Left-sidebar layout */
+.basic-sidebar-left {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: repeat(3, auto);
+  grid-gap: var(--grid-gap);
+  grid-template-areas: "header header"
+                       "sidebar-1 main"
+                       "footer footer";
+}
+
+/* Right-sidebar layout */
+.basic-sidebar-right {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: repeat(3, auto);
+  grid-gap: var(--grid-gap);
+  grid-template-areas: "header header"
+                       "main sidebar-2"
+                       "footer footer";
+}
+
+/* Naming the parts of the layout */
+.head {
+  grid-area: header;
+  background-color: var(--main-theme-color);
+}
+
+.footer {
+  grid-area: footer;
+  background-color: var(--main-theme-color);
+}
+
+.sidebar-left {
+  background-color: var(--secondary-theme-color);
+  grid-area: sidebar-1;
+}
+
+main {
+  grid-area: main;
+  background-image: var(--body-background);
+}
+
+.sidebar-right {
+  background-color: var(--secondary-theme-color);
+  grid-area: sidebar-2;
+}
+
+body {
+  background-color: #FFFFFF;
+}
