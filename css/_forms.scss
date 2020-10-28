@@ -50,12 +50,8 @@ input[type=reset]:hover,
 input[type=button]:hover,
 input[type=submit]:hover {
   color: var(--tertiary-theme-color);
-  -webkit-transition: color 0.3s ease;
-  -moz-transition: color 0.3s ease;
   transition: color 0.3s ease;
   background-color: var(--text-color);
-  -webkit-transition: background-color 0.6s ease;
-  -moz-transition: background-color 0.6s ease;
   transition: background-color 0.6s ease;
 }
 

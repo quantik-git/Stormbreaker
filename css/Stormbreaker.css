@@ -469,12 +469,8 @@ header a {
 
 .links-hover a:hover {
   background-color: var(--text-color);
-  -webkit-transition: background-color 0.6s ease;
-  -moz-transition: background-color 0.6s ease;
   transition: background-color 0.6s ease;
   color: var(--main-theme-color);
-  -webkit-transition: color 0.3s ease;
-  -moz-transition: color 0.3s ease;
   transition: color 0.3s ease;
 }
 
@@ -596,20 +592,12 @@ figcaption {
 
 .btn-sidebar-left {
   padding-left: 0;
-  -webkit-border-top-right-radius: 15px;
-  -webkit-border-bottom-right-radius: 15px;
-  -moz-border-radius-topright: 15px;
-  -moz-border-radius-bottomright: 15px;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
 }
 
 .btn-sidebar-right {
   padding-right: 0;
-  -webkit-border-top-left-radius: 15px;
-  -webkit-border-bottom-left-radius: 15px;
-  -moz-border-radius-topleft: 15px;
-  -moz-border-radius-bottomleft: 15px;
   border-top-left-radius: 15px;
   border-bottom-left-radius: 15px;
 }
@@ -666,12 +654,8 @@ input[type=reset]:hover,
 input[type=button]:hover,
 input[type=submit]:hover {
   color: var(--tertiary-theme-color);
-  -webkit-transition: color 0.3s ease;
-  -moz-transition: color 0.3s ease;
   transition: color 0.3s ease;
   background-color: var(--text-color);
-  -webkit-transition: background-color 0.6s ease;
-  -moz-transition: background-color 0.6s ease;
   transition: background-color 0.6s ease;
 }
 
