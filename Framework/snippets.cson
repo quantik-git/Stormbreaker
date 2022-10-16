@@ -1,0 +1,268 @@
+# Important: When adding a new snippet,
+# there is a second section halfway down this file
+# where you need to null-out the snippet to prevent it from
+# appearing in tags or embedded contexts
+'.text.html':
+  # Layout templates
+  'Basic Template':
+      'prefix': 'basic'
+      'body': """
+        <!DOCTYPE html>
+        <html lang="$1" dir="ltr">
+          <head>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <meta name="author" content="$2">
+            <meta name="description" content="$3">
+            <meta name="keywords" content="$4">
+            <title>$5</title>
+            <link rel="stylesheet" href="${6:https://cdn.jsdelivr.net/gh/quantik-git/Stormbreaker@master/Stormbreaker.min.css}">
+            <script src="https://code.jquery.com/jquery-1.10.2.min.js" defer></script>
+            <script src="https://cdn.jsdelivr.net/gh/quantik-git/Stormbreaker@master/functionality.min.js" defer></script>
+          </head>
+          <body class="basic">
+
+            <header class="head ${7:sticky-top}">
+              $8
+            </header>
+
+            <main class="flexCenter">
+              $9
+            </main>
+
+            <footer class="footer">
+              $10
+            </footer>
+
+          </body>
+        </html>
+        """
+
+  'Sidebar Right Template':
+      'prefix': 'sidebar-right'
+      'body': """
+      <!DOCTYPE html>
+      <html lang="$1" dir="ltr">
+        <head>
+          <meta charset="utf-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <meta name="author" content="$2">
+          <meta name="description" content="$3">
+          <meta name="keywords" content="$4">
+          <title>$5</title>
+          <link rel="stylesheet" href="${6:https://cdn.jsdelivr.net/gh/quantik-git/Stormbreaker@master/Stormbreaker.min.css}">
+          <script src="https://code.jquery.com/jquery-1.10.2.min.js" defer></script>
+          <script src="https://cdn.jsdelivr.net/gh/quantik-git/Stormbreaker@master/functionality.min.js" defer></script>
+        </head>
+        <body class="basic-sidebar-right">
+
+          <header class="head ${7:sticky-top}">
+            $8
+          </header>
+
+          <main class="flexCenter">
+            $9
+            <button class="btn-sidebar-right" aria-pressed="false"></button>
+          </main>
+
+          <aside class="sidebar-right" aria-expanded="true">
+            $10
+          </aside>
+
+          <footer class="footer">
+            $11
+          </footer>
+
+        </body>
+      </html>
+        """
+
+  'Sidebar Left Template':
+      'prefix': 'sidebar-left'
+      'body': """
+      <!DOCTYPE html>
+      <html lang="$1" dir="ltr">
+        <head>
+          <meta charset="utf-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <meta name="author" content="$2">
+          <meta name="description" content="$3">
+          <meta name="keywords" content="$4">
+          <title>$5</title>
+          <link rel="stylesheet" href="${6:https://cdn.jsdelivr.net/gh/quantik-git/Stormbreaker@master/Stormbreaker.min.css}">
+          <script src="https://code.jquery.com/jquery-1.10.2.min.js" defer></script>
+          <script src="https://cdn.jsdelivr.net/gh/quantik-git/Stormbreaker@master/functionality.min.js" defer></script>
+        </head>
+        <body class="basic-sidebar-left">
+
+          <header class="head ${7:sticky-top}">
+            $8
+          </header>
+
+          <main class="flexCenter">
+            $9
+            <button class="btn-sidebar-left" aria-pressed="false"></button>
+          </main>
+
+          <aside class="sidebar-left" aria-expanded="true">
+            $10
+          </aside>
+
+          <footer class="footer">
+            $11
+          </footer>
+
+        </body>
+      </html>
+        """
+
+  # Navbars
+  'Horizontal Navbar':
+      'prefix': 'horizontal-nav'
+      'body': """
+        <nav class="flexRow">
+          <ul class="flexRow flexCenter flexStart brand">
+            <li><a href="${1:index.html}">${2:Brand Name}</a></li>
+            <li class="flexEnd"><button aria-pressed="false" aria-controls="menu toggle button" id="toggle">&#9776;</button></li>
+          </ul>
+          <ul class="flexRow flexCenter flexEnd links-hover"  aria-expanded="true">
+            <li><a href="${3:#}">${4:Link 1}</a></li>
+            <li><a href="${5:#}">${6:Link 2}</a></li>
+            <li><a href="${7:#}">${8:Link 3}</a></li>
+          </ul>
+        </nav>
+        """
+    'Vertical Navbar':
+        'prefix': 'vertical-nav'
+        'body': """
+          <nav class="flexCol vertical-nav" aria-labelledby="${1:title1}">
+            <header id="${1:title1}">${2:Title}</header>
+            <ul class="flexCol flexCenter links-hover">
+              <li><a href="${3:#}">${4:Link 1}</a></li>
+              <li><a href="${5:#}">${6:Link 2}</a></li>
+              <li><a href="${7:#}">${8:Link 3}</a></li>
+            </ul>
+          </nav>
+          """
+    # Cards
+    'Card':
+        'prefix': 'card'
+        'body': """
+          <article class="card" aria-labelledby="${1:title1}">
+            <figure>
+              <img src="${2:https://bit.ly/2BrBGxX}" alt="${3:Hot air balloons}">
+              <header>
+                <h${4:2} class="card-header" id="${1:title1}">${5:A short heading}</h${4:2}>
+              </header>
+              <figcaption class="content">${6:The idea of reaching the North Pole by means of balloons appears to have been entertained many years ago.}</figcaption>
+            </figure>
+          </article>
+          """
+      'Card Reverse':
+          'prefix': 'card-reverse'
+          'body': """
+            <article class="card card-reverse" aria-labelledby="${1:title1}">
+              <figure>
+                <img src="${2:https://bit.ly/2BrBGxX}" alt="${3:Hot air balloons}">
+                <header>
+                  <h${4:2} class="card-header" id="${1:title1}">${5:A short heading}</h${4:2}>
+                </header>
+                <figcaption class="content">${6:The idea of reaching the North Pole by means of balloons appears to have been entertained many years ago.}</figcaption>
+              </figure>
+            </article>
+            """
+
+      # Stormbreaker Essentials
+      # Stormbreaker Article
+      'Stormbreaker Article':
+          'prefix': 'Stormbreaker-article'
+          'body': """
+            <article class="${1:flexCol}" aria-labelledby="${2:title1}" aria-describedby="${3:text1}">
+              <h${5:1} id="${2:title1}" class="flexCenter">${4:Title}</h${5:1}>
+              <p class="flexCenter" id="${3:text1}">$6</p>
+            </article>
+            """
+      # Stormbreaker Img
+      'Stormbreaker Img':
+          'prefix': 'Stormbreaker-img'
+          'body': """
+            <figure>
+              <img src="${1:assets/IMG-650x500.png}" alt="${2:Hot air balloons}">
+              <figcaption class="${3:flexCenter}">${4:Caption}</figcaption>
+            </figure>
+            """
+      # Stormbreaker Quote
+      'Stormbreaker Quote':
+          'prefix': 'Stormbreaker-quote'
+          'body': """
+            <blockquote class="${1:flexCenter}">
+              <q>${2:He Thought It And He Said It}</q>
+            </blockquote>
+            """
+      # Stormbreaker Fieldset
+      'Stormbreaker Fieldset':
+          'prefix': 'Stormbreaker-fieldset'
+          'body': """
+            <fieldset>
+              <legend>${1:Name}</legend>
+              <input type="${2:text}" name="$3" value="$4" placeholder="$5" ${6:aria-required="true" required}>
+            </fieldset>
+            """
+      # Stormbreaker Input
+      'Stormbreaker Input':
+          'prefix': 'Stormbreaker-input'
+          'body': """
+            <input type="${1:text}" name="$2" value="$3" placeholder="$4" ${5:aria-required="true" required}>
+            """
+      # Stormbreaker Form
+      'Stormbreaker Form':
+          'prefix': 'Stormbreaker-form'
+          'body': """
+            <article class="$1" aria-labelledby="${2:hdr1}">
+              <header class="$3" aria-labelledby="${2:hdr1}">
+                <h4 id="${2:hdr1}">${4:Form}</h4>
+              </header>
+              <form class="$5" action="${6:index.html}" method="${7:post}" title="${4:Form}">
+                $8
+              </form>
+            </article>
+            """
+
+# These null out the snippets so the snippets are not available when in a tag or
+# in embedded contexts like <script> and <style>
+'.text.html .meta.tag, .text.html .embedded':
+  # Layout templates
+  'Basic template':
+    'prefix': 'basic'
+  'Sidebar Right Template':
+     'prefix': 'sidebar-right'
+  'Sidebar Left Template':
+     'prefix': 'sidebar-left'
+  # Navbars
+  'Horizontal Navbar':
+    'prefix': 'horizontal-nav'
+  'Vertical Navbar':
+      'prefix': 'vertical-nav'
+  # Cards
+  'Card':
+      'prefix': 'card'
+  'Card Reverse':
+      'prefix': 'card-reverse'
+  # Stormbreaker Article
+  'Stormbreaker Article':
+      'prefix': 'Stormbreaker-article'
+  # Stormbreaker Img
+  'Stormbreaker Img':
+      'prefix': 'Stormbreaker-img'
+  # Stormbreaker Quote
+  'Stormbreaker Quote':
+      'prefix': 'Stormbreaker-quote'
+  # Stormbreaker Fieldset
+  'Stormbreaker Fieldset':
+      'prefix': 'Stormbreaker-fieldset'
+  # Stormbreaker Input
+  'Stormbreaker Input':
+      'prefix': 'Stormbreaker-input'
+  # Stormbreaker Form
+  'Stormbreaker Form':
+      'prefix': 'Stormbreaker-form'

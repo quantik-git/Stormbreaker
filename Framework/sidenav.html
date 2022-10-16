@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Framework</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/quantik-git/Stormbreaker@latest/Stormbreaker.css">
+    <script src="https://code.jquery.com/jquery-1.10.2.js" defer></script>
+    <script src="functionality.js" defer></script>
+  </head>
+  <body class="basic-sidebar-right">
+
+    <header class="head sticky-top">
+      <nav class="flexRow">
+        <ul class="flexRow flexCenter flexStart brand">
+          <li><a href="index.html">Stormbreaker</a></li>
+          <li class="flexEnd"><button aria-pressed="false" aria-controls="menu toggle button" id="toggle">&#9776;</button></li>
+        </ul>
+        <ul class="flexRow flexCenter flexEnd links-hover"  aria-expanded="true">
+          <li><a href="index.html">Início</a></li>
+          <li><a href="forms.html">Forms</a></li>
+          <li><a href="generator.html">Generator</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="flexCenter fill">
+      <article class="flexCol flexCenter" aria-labelledby="title-article" aria-describedby="description-article">
+        <h1 id="title-article" class="flexCenter">Sidenav</h1>
+        <p class="flexCenter" id="description-article">&emsp;This is a layout with a sidebar</p>
+        <p class="flexCenter">&emsp;In hac habitasse platea dictumst. Phasellus eget lacus at tellus laoreet luctus eget ut est. Donec ornare risus id pellentesque faucibus. Praesent faucibus, nibh sed vulputate lobortis, sem ante egestas libero, ut pharetra velit lectus condimentum nulla. Praesent lacinia sit amet enim sit amet hendrerit. Suspendisse nec odio pharetra, porttitor ante quis, fermentum tellus. Cras ut dictum quam. Donec tincidunt sapien eget elementum rutrum. Mauris sollicitudin libero dolor, vehicula tincidunt odio pretium at.</p>
+      </article>
+      <button class="contrast magnify"> x </button>
+      <button class="btn-sidebar-right" aria-pressed="false"></button>
+    </main>
+
+    <aside class="sidebar-right" aria-expanded="true">
+      <nav class="flexCol vertical-nav" aria-labelledby="title1">
+        <header id="title1">Title</header>
+        <ul class="flexCol flexCenter links-hover">
+          <li><a href="#">Link 1</a></li>
+          <li><a href="#">Link 2</a></li>
+          <li><a href="#">Link 3</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <footer class="footer flexCenter">
+      <h1 class="h4">Footer</h1>
+    </footer>
+
+  </body>
+</html>

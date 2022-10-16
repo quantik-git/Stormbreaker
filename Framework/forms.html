@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville%7CMontserrat" rel="stylesheet">
+  </head>
+  <body class="basic">
+    <header class="head sticky-top">
+      <nav class="flexRow">
+        <ul class="flexRow flexCenter flexStart brand">
+          <li><a href="index.html">Stormbreaker</a></li>
+          <li class="flexEnd"><button aria-pressed="false" aria-controls="menu toggle button" id="toggle">&#9776;</button></li>
+        </ul>
+        <ul class="flexRow flexCenter flexEnd links-hover"  aria-expanded="true">
+          <li><a href="index.html">Início</a></li>
+          <li><a href="sidenav.html">Sidebar</a></li>
+          <li><a href="generator.html">Generator</a></li>
+        </ul>
+      </nav>
+    </header>
+    
+    <main class="flexCenter">
+      <article class="flexCol flexCenter" aria-labelledby="hdr1">
+        <header class="flexCenter" aria-labelledby="hdr1">
+          <h4 id="hdr1">Login</h4>
+        </header>
+        <form class="flexCol flexCenter" action="index.html" method="post">
+          <input type="email" name="" placeholder="email" aria-required="true" required autofocus>
+          <input type="password" name="" placeholder="password" aria-required="true" required>
+          <input type="submit" name="" value="submit">
+        </form>
+      </article>
+      <article class="flexCol flexCenter">
+        <header class="flexCenter">
+          <h4>Forms</h4>
+        </header>
+        <form class="flexCol flexCenter" action="index.html" method="post">
+          <fieldset>
+            <legend>fieldset</legend>
+            <input type="text" name="" value="" placeholder="input" aria-required="true" required>
+          </fieldset>
+          <div class="flexCol flexCenter">
+            <input type="email" name="" value="email">
+            <input type="password" name="" value="password">
+            <input type="search" name="" value="search">
+            <input type="number" name="" value="100">
+            <input type="text" name="" value="text">
+            <input type="tel" name="" value="tel">
+            <input type="url" name="" value="url">
+            <input type="submit" name="" value="submit">
+            <input type="button" name="" value="button">
+            <input type="reset" name="" value="reset">
+            <input type="time" name="" value="">
+            <input type="week" name="" value="">
+            <input type="month" name="" value="">
+            <input type="date" name="" value="">
+            <input type="datetime-local" name="" value="">
+            <input type="range" name="" value="">
+            <input type="radio" name="" value="">
+            <input type="checkbox" name="" value="">
+            <input type="color" name="" value="">
+            <input type="file" name="" value="">
+            <input type="image" name="" value="">
+          </div>
+        </form>
+      </article>
+    </main>
+    <footer class="footer flexCenter">
+      <h2>Footer</h2>
+    </footer>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="functionality.js"></script>
+  </body>
+</html>

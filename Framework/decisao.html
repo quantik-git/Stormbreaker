@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Framework</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville%7CMontserrat" rel="stylesheet">
+  </head>
+  <body class="basic">
+
+      <header class="head sticky-top">
+      <nav class="flexRow">
+        <ul class="flexRow flexCenter flexStart brand">
+          <li><a href="index.html">Stormbreaker</a></li>
+          <li class="flexEnd"><button aria-pressed="false" aria-controls="menu toggle button" id="toggle">&#9776;</button></li>
+        </ul>
+        <ul class="flexRow flexCenter flexEnd links-hover"  aria-expanded="true">
+          <li><a href="index.html">Início</a></li>
+          <li><a href="sidenav.html">Sidenav</a></li>
+          <li><a href="forms.html">Forms</a></li>
+        </ul>
+      </nav>
+      </header>
+
+      <main class="flexCenter fill">
+        <article class="flexCol" aria-labelledby="hdr1" aria-describedby="text1">
+          <h1 id="hdr1" class="flexCenter">Layout</h1>
+          <form role="form" class="row flexRow">
+            <div class="span-md-4">
+              <figure>
+                <img src="assets/basicLayout.png" alt="Hot air balloons" style="max-width:30vw;margin-right:1em;">
+                <figcaption class="flexCenter">Basic Layout</figcaption>
+              </figure>
+            </div>
+            <div class="span-md-4 flexCol">
+              <figure>
+                <img src="assets/sidebarLeft.png" alt="Hot air balloons" style="max-width:30vw;margin-right:1em;">
+                <figcaption class="flexCenter">Sidebar Left</figcaption>
+              </figure>
+            </div>
+            <div class="span-md-4">
+              <figure>
+                <img src="assets/sidebarRight.png" alt="Hot air balloons" style="max-width:30vw;">
+                <figcaption class="flexCenter">Sidebar Right</figcaption>
+              </figure>
+            </div>
+          </form>
+        </article>
+      </main>
+
+      <footer class="footer flexRow flexCenter">
+        <h4 class="">Footer</h4>
+      </footer>
+    
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="functionality.js"></script>
+  <script>
+    var basic = '\
+    <!DOCTYPE html> \n\
+      <html lang="" dir="ltr"> \n\
+        <head> \n\
+          <meta charset="utf-8"> \n\
+          <meta name="viewport" content="width=device-width, initial-scale=1.0"> \n\
+          <title></title> \n\
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/quantik-git/Stormbreaker/Stormbreaker.css"> \n\
+          <link href=":https://fonts.googleapis.com/css?family=Libre+Baskerville%7CMontserrat" rel="stylesheet"> \n\
+        </head> \n\
+        <body class="basic"> \n\
+          <header class="head"> \n\
+             \n\
+          </header> \n\
+          <main class="flexCenter"> \n\
+             \n\
+          </main> \n\
+          <footer class="footer"> \n\
+             \n\
+          </footer> \n\
+          <script src="https://code.jquery.com/jquery-1.10.2.js">&lt;/script> \n\
+          <script src="https://cdn.jsdelivr.net/gh/quantik-git/Stormbreaker/functionality.js">&lt;/script> \n\
+        </body> \n\
+      </html>';
+    
+    const valores = [];
+    $( "form" ).submit(function( event ) {
+      const fields = $( this ).serializeArray();
+      event.preventDefault();
+      
+      if(fields[0].value == "" || fields[1].value == "" || fields[2].value == ""){
+        $('#result').val("Preencha os campos");
+        return;
+      }
+      
+      fields.forEach(function(campos){
+        valores.push(campos.value);
+      });
+      
+      var basic ="/* Variables */ \n\
+:root { \n\
+  /* Fonts */ \n\
+  --title-font: "+ valores[0] +"; /*variable that defines title and subheads font*/ \n\
+  --text-font: "+ valores[1] +"; /*variable that defines general text font*/ \n\
+  /* Grid */ \n\
+  --grid-columns: "+ valores[2] +"; \n\
+  /* Colors */ \n\
+  --text-color: "+ valores[3] +"; \n\
+  --main-theme-color: "+ valores[4] +"; \n\
+  --secondary-theme-color: "+ valores[5] +"; \n\
+  --tertiary-theme-color: "+ valores[6] +"; \n\
+  --body-background: linear-gradient(315deg, var(--tertiary-theme-color) 0%, var(--main-theme-color) 74%);/* Can be replaced by a gradient or a image */ \n\
+}";
+      $('#result').val(basic);
+    });
+    
+  </script>
+  </body>
+</html>
